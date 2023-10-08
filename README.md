@@ -1,2 +1,15 @@
-# Kube-Land
-Kube Land est un jeu-vidéo en cours de développement de plateforme en 2D, réaliser sur Godot Engine
+# Kube Land
+## Présentation 
+🎮 - Kube Land est un jeux-vidéo de plateforme en 2D. Le jeu se compose de trois mondes duquel le principal protagoniste devra affronter différent ennemis et poursuivre une aventure sur un large territoire !
+
+## Configuration requise
+😕 - La configuration sera afficher dès lors que le jeu sera fini.
+## Ressources utilisés
+🎨 - Assets: https://www.kenney.nl/assets/pixel-platformer
+## Information sur la conception
+<p>🖌️- Graphismes: Aseprite/Paint.NET</p>
+⚙️- Moteur de jeu: Godot Engine (3.5)
+
+
+ 
+
