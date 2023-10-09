@@ -16,3 +16,13 @@ region_rect = Rect2( 1, 19, 16, 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+
+[node name="LedgeCheckRight" type="RayCast2D" parent="."]
+position = Vector2( 8, 8 )
+enabled = true
+cast_to = Vector2( 0, 8 )
+
+[node name="LedgeCheckLeft" type="RayCast2D" parent="."]
+position = Vector2( -8, 8 )
+enabled = true
+cast_to = Vector2( 0, 8 )
