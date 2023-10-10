@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://TileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World.gd" type="Script" id=3]
 [ext_resource path="res://cloud_1.png" type="Texture" id=4]
 [ext_resource path="res://WalkingEnemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Spikes.tscn" type="PackedScene" id=6]
 
 [node name="World" type="Node2D"]
 script = ExtResource( 3 )
@@ -15,10 +16,11 @@ tile_data = PoolIntArray( -458766, 1, 65537, -458765, 1, 65538, -458764, 1, 6553
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 24, 84 )
+z_index = 10
 JUMP_FORCE = -140
 
 [node name="Cloud1" type="Sprite" parent="."]
-position = Vector2( 201, 9 )
+position = Vector2( 188, 8 )
 texture = ExtResource( 4 )
 offset = Vector2( -19, -9 )
 
@@ -33,4 +35,7 @@ texture = ExtResource( 4 )
 offset = Vector2( -19, -9 )
 
 [node name="WalkingEnemy" parent="." instance=ExtResource( 5 )]
-position = Vector2( 140, 84 )
+position = Vector2( 279, 101 )
+
+[node name="Spikes" parent="." instance=ExtResource( 6 )]
+position = Vector2( 404, 92 )
