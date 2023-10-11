@@ -10,6 +10,9 @@
 <p>🖌️- Graphismes: Aseprite/Paint.NET</p>
 ⚙️- Moteur de jeu: Godot Engine (3.5)
 
+## Information complémentaire
+:+1: - Kube Land est également basée sur le tutoriel de HeartBeast, n'hésitez pas à le soutennir ! 
+
 
  
 
