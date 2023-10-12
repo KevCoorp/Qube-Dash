@@ -9,8 +9,6 @@ extents = Vector2( 8, 8 )
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2
 script = ExtResource( 2 )
-JUMP_FORCE = -120
-JUMP_RELEASE_FORCE = -40
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )

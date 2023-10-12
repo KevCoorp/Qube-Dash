@@ -17,21 +17,21 @@ tile_data = PoolIntArray( -458766, 1, 65537, -458765, 1, 65538, -458764, 1, 6553
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 24, 84 )
 z_index = 10
-JUMP_FORCE = -164
-JUMP_RELEASE_FORCE = -64
+JUMP_FORCE = -140
+JUMP_RELEASE_FORCE = -70
 
 [node name="Cloud1" type="Sprite" parent="."]
-position = Vector2( 128, -9 )
+position = Vector2( 158, 0 )
 texture = ExtResource( 4 )
 offset = Vector2( -19, -9 )
 
 [node name="Cloud2" type="Sprite" parent="."]
-position = Vector2( 712, -30 )
+position = Vector2( 710, -28 )
 texture = ExtResource( 4 )
 offset = Vector2( -19, -9 )
 
 [node name="Cloud3" type="Sprite" parent="."]
-position = Vector2( 456, -5 )
+position = Vector2( 468, 0 )
 texture = ExtResource( 4 )
 offset = Vector2( -19, -9 )
 
