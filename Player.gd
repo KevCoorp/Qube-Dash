@@ -10,6 +10,10 @@ export(int) var GRAVITY = 4
 export(int) var ADDITIONAL_FALL_GRAVITY = 4 
 
 var velocity = Vector2.ZERO
+var buffered_jump = false
+
+
+onready var jumpBufferTimer: = $JumpBufferTimer
 
 # Mouvement du joueur
 func _physics_process(delta):
@@ -23,12 +27,16 @@ func _physics_process(delta):
 		apply_acceleration(input.x)
 		
 	if is_on_floor():
-		if Input.is_action_just_pressed("ui_up"):
+		if Input.is_action_just_pressed("ui_up") or buffered_jump:
 			velocity.y = JUMP_FORCE
+			buffered_jump = false
 		else:
-			
 			if Input.is_action_just_released("ui_up") and velocity.y < JUMP_RELEASE_FORCE:
 				velocity.y = JUMP_RELEASE_FORCE
+				
+			if Input.is_action_just_pressed("ui_up"):
+				buffered_jump = true 
+				jumpBufferTimer.start()
 		
 			if velocity.y > 0:
 				velocity.y += ADDITIONAL_FALL_GRAVITY
@@ -48,3 +56,7 @@ func apply_friction():
 func apply_acceleration(amount):
 	velocity.x = move_toward(velocity.x, MAX_SPEED * amount, ACCELERATION)
 	
+	
+func _on_JumpBufferTimer_timeout():
+	buffered_jump = false
+
