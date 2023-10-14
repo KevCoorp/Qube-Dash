@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://TileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://cloud_1.png" type="Texture" id=4]
 [ext_resource path="res://WalkingEnemy.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Spikes.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Planet.png" type="Texture" id=7]
 
 [node name="World" type="Node2D"]
 script = ExtResource( 3 )
@@ -45,3 +46,8 @@ position = Vector2( 567, 108 )
 
 [node name="Spikes3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 585, 108 )
+
+[node name="Planet" type="Sprite" parent="."]
+position = Vector2( 348, -46 )
+z_index = -5
+texture = ExtResource( 7 )
