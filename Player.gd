@@ -1,17 +1,16 @@
 extends KinematicBody2D
 class_name Player
 
-export(int) var JUMP_FORCE = -140
-export(int) var JUMP_RELEASE_FORCE = -70
-export(int) var MAX_SPEED = 50
+export(int) var JUMP_FORCE = -140 # Force du saut
+export(int) var JUMP_RELEASE_FORCE = -70 
+export(int) var MAX_SPEED = 50 # Vitesse max
 export(int) var ACCELERATION = 10 
 export(int) var FRICTION = 10
-export(int) var GRAVITY = 4
+export(int) var GRAVITY = 4 
 export(int) var ADDITIONAL_FALL_GRAVITY = 4 
 
 var velocity = Vector2.ZERO
 var buffered_jump = false
-
 
 onready var jumpBufferTimer: = $JumpBufferTimer
 
