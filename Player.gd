@@ -52,6 +52,7 @@ func apply_gravity():
 func apply_friction():
 	velocity.x = move_toward(velocity.x, 0, FRICTION)
 
+# Accélération
 func apply_acceleration(amount):
 	velocity.x = move_toward(velocity.x, MAX_SPEED * amount, ACCELERATION)
 	
