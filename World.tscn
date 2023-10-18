@@ -48,6 +48,6 @@ position = Vector2( 567, 108 )
 position = Vector2( 585, 108 )
 
 [node name="Planet" type="Sprite" parent="."]
-position = Vector2( 348, -46 )
+position = Vector2( 385, -61 )
 z_index = -5
 texture = ExtResource( 7 )
