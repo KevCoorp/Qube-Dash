@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Planet.png-51b5d75306bae0925532ddfd129bac00.stex"
+path="res://.import/tiles_packed.png-374e0c0c1a276835b11d30b875ea804b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Planet.png"
-dest_files=[ "res://.import/Planet.png-51b5d75306bae0925532ddfd129bac00.stex" ]
+source_file="res://Textures/Tilemap/tiles_packed.png"
+dest_files=[ "res://.import/tiles_packed.png-374e0c0c1a276835b11d30b875ea804b.stex" ]
 
 [params]
 
