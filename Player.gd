@@ -10,6 +10,7 @@ export(int) var GRAVITY = 4
 export(int) var ADDITIONAL_FALL_GRAVITY = 4 
 
 var velocity = Vector2.ZERO
+var coins = 0
 var buffered_jump = false
 
 onready var jumpBufferTimer: = $JumpBufferTimer
@@ -42,7 +43,9 @@ func _physics_process(delta):
 	
 	
 	velocity = move_and_slide(velocity, Vector2.UP)
-	
+
+# Fonctions
+
 # Gravité 
 func apply_gravity():
 		velocity.y += GRAVITY
@@ -59,4 +62,8 @@ func apply_acceleration(amount):
 	
 func _on_JumpBufferTimer_timeout():
 	buffered_jump = false
+	
+
+func _add_coin():
+	coins = coins + 1 
 
