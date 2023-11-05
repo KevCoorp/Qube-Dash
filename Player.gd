@@ -63,7 +63,6 @@ func apply_acceleration(amount):
 func _on_JumpBufferTimer_timeout():
 	buffered_jump = false
 	
-
+	
 func _add_coin():
 	coins = coins + 1 
-
