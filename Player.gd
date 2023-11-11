@@ -46,6 +46,9 @@ func _physics_process(delta):
 
 # Fonctions
 
+func _on_fallzone_body_entered(body):
+	get_tree().change_scene("res://Level/Level1.tscn")
+
 # Gravité 
 func apply_gravity():
 		velocity.y += GRAVITY
@@ -65,4 +68,7 @@ func _on_JumpBufferTimer_timeout():
 	
 	
 func _add_coin():
-	coins = coins + 1 
+	coins += 1
+
+
+

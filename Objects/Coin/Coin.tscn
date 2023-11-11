@@ -109,3 +109,4 @@ anims/default = SubResource( 3 )
 anims/pick_up = SubResource( 4 )
 
 [connection signal="body_entered" from="." to="." method="_on_Coin_body_entered"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
