@@ -1,9 +1,8 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://HUD/Misc/HUD_Coin.png" type="Texture" id=1]
 [ext_resource path="res://Textures/Environment/cloud.png" type="Texture" id=2]
 [ext_resource path="res://Textures/Environment/sun.png" type="Texture" id=3]
-[ext_resource path="res://Textures/Background/wallpaper1.png" type="Texture" id=4]
 [ext_resource path="res://Level1.gd" type="Script" id=5]
 [ext_resource path="res://Textures/Tiles/tiles_packed.png" type="Texture" id=6]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=7]
@@ -235,7 +234,7 @@ size = 8
 font_data = ExtResource( 12 )
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 22, 142.5 )
+extents = Vector2( 26.5, 142.5 )
 
 [node name="World" type="Node2D"]
 position = Vector2( 20, 0 )
@@ -256,47 +255,41 @@ __meta__ = {
 }
 JUMP_FORCE = -160
 
-[node name="Background" type="Sprite" parent="."]
-position = Vector2( 1243.75, 22 )
-scale = Vector2( 1.48359, 0.499074 )
-z_index = -10
-texture = ExtResource( 4 )
-
-[node name="Cloud" type="Sprite" parent="Background"]
-position = Vector2( -719.706, -226.419 )
-scale = Vector2( 0.674039, 2.00371 )
+[node name="Cloud" type="Sprite" parent="."]
+position = Vector2( 128.917, -84.1765 )
+scale = Vector2( 0.956293, 1.0436 )
 texture = ExtResource( 2 )
 
-[node name="Cloud_1" type="Sprite" parent="Background/Cloud"]
+[node name="Cloud_1" type="Sprite" parent="Cloud"]
 position = Vector2( 386, 64 )
 texture = ExtResource( 2 )
 
-[node name="Cloud_2" type="Sprite" parent="Background/Cloud"]
+[node name="Cloud_2" type="Sprite" parent="Cloud"]
 position = Vector2( 581, -25 )
 texture = ExtResource( 2 )
 
-[node name="Cloud_3" type="Sprite" parent="Background/Cloud"]
+[node name="Cloud_3" type="Sprite" parent="Cloud"]
 position = Vector2( 1118, 14 )
 texture = ExtResource( 2 )
 
-[node name="Cloud_4" type="Sprite" parent="Background/Cloud"]
+[node name="Cloud_4" type="Sprite" parent="Cloud"]
 position = Vector2( 156, 78 )
 texture = ExtResource( 2 )
 
-[node name="Cloud_5" type="Sprite" parent="Background/Cloud"]
+[node name="Cloud_5" type="Sprite" parent="Cloud"]
 position = Vector2( 888, 39 )
 texture = ExtResource( 2 )
 
-[node name="Sun" type="Sprite" parent="Background/Cloud/Cloud_5"]
+[node name="Sun" type="Sprite" parent="Cloud/Cloud_5"]
 position = Vector2( -590, 52 )
 z_index = -2
 texture = ExtResource( 3 )
 
-[node name="Cloud_6" type="Sprite" parent="Background/Cloud"]
+[node name="Cloud_6" type="Sprite" parent="Cloud"]
 position = Vector2( 1390, 14 )
 texture = ExtResource( 2 )
 
-[node name="Cloud_7" type="Sprite" parent="Background/Cloud"]
+[node name="Cloud_7" type="Sprite" parent="Cloud"]
 position = Vector2( 1846, 14 )
 texture = ExtResource( 2 )
 
@@ -380,16 +373,16 @@ position = Vector2( 447, -16 )
 [node name="fallzone" type="Area2D" parent="."]
 position = Vector2( -329, 315 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="fallzone"]
+[node name="fall1" type="CollisionShape2D" parent="fallzone"]
 position = Vector2( 680, 3.5 )
 shape = SubResource( 23 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="fallzone"]
+[node name="fall2" type="CollisionShape2D" parent="fallzone"]
 position = Vector2( 932, 4 )
 shape = SubResource( 23 )
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="fallzone"]
-position = Vector2( 1413, 20 )
+[node name="fall3" type="CollisionShape2D" parent="fallzone"]
+position = Vector2( 1408.5, 20 )
 shape = SubResource( 23 )
 
 [connection signal="coin_collected" from="Coins/Coin" to="HUD" method="_on_coin_collected"]
