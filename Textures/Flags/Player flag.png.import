@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wallpaper1.png-0b40def87424ee08ba3cfd2c43e08ae6.stex"
+path="res://.import/Player flag.png-59051dd69cb3af1f88142fae10746752.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Background/wallpaper1.png"
-dest_files=[ "res://.import/wallpaper1.png-0b40def87424ee08ba3cfd2c43e08ae6.stex" ]
+source_file="res://Textures/Flags/Player flag.png"
+dest_files=[ "res://.import/Player flag.png-59051dd69cb3af1f88142fae10746752.stex" ]
 
 [params]
 
