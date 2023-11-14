@@ -370,6 +370,9 @@ tile_data = PoolIntArray( -393096, 0, 65537, -393095, 0, 65538, -393094, 0, 6553
 [node name="Player" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1929, 82 )
 z_index = 10
+__meta__ = {
+"_edit_group_": true
+}
 JUMP_FORCE = -160
 
 [node name="NextLevel" parent="." instance=ExtResource( 13 )]
@@ -415,7 +418,7 @@ position = Vector2( 2089.26, 5.3853 )
 texture = ExtResource( 2 )
 
 [node name="WalkingEnemy" parent="." instance=ExtResource( 8 )]
-position = Vector2( 288, 83 )
+position = Vector2( 38, 81 )
 __meta__ = {
 "_edit_group_": true,
 "_edit_horizontal_guides_": [ -12.0 ]
