@@ -9,6 +9,8 @@ export(int) var FRICTION = 10
 export(int) var GRAVITY = 4 
 export(int) var ADDITIONAL_FALL_GRAVITY = 4 
 
+
+var is_dying = false
 var velocity = Vector2.ZERO
 var coins = 0
 var buffered_jump = false
@@ -16,6 +18,7 @@ var buffered_jump = false
 onready var jumpBufferTimer: = $JumpBufferTimer
 
 # Mouvement du joueur
+
 func _physics_process(delta):
 	apply_gravity()
 	var input = Vector2.ZERO
@@ -71,4 +74,5 @@ func _add_coin():
 	coins += 1
 
 
-
+func _on_death_timer_timeout():
+	get_tree().reload_current_scene()
