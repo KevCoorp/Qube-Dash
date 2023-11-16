@@ -1,7 +1,23 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Textures/Flags/Enemy flag.png" type="Texture" id=1]
 [ext_resource path="res://Script/NextLevel.gd" type="Script" id=2]
+[ext_resource path="res://Textures/Flags/Player flag.png" type="Texture" id=3]
+[ext_resource path="res://Textures/Flags/Enemy flag 2.png" type="Texture" id=4]
+[ext_resource path="res://Textures/Flags/Player flag 2.png" type="Texture" id=5]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "Check",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "Uncheck",
+"speed": 2.0
+} ]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 11.5, 30 )
@@ -10,11 +26,14 @@ extents = Vector2( 11.5, 30 )
 script = ExtResource( 2 )
 target_level_path = "res://Level/Level2.tscn"
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 8, 0 )
-texture = ExtResource( 1 )
+frames = SubResource( 2 )
+animation = "Uncheck"
+playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 6.5, -1 )
 shape = SubResource( 1 )
 
