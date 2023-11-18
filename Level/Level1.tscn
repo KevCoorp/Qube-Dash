@@ -439,12 +439,12 @@ margin_bottom = 40.0
 script = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="HUD/Countdown"]
-margin_left = 259.0
-margin_top = 12.0
-margin_right = 299.0
-margin_bottom = 26.0
+margin_left = 215.0
+margin_top = 8.0
+margin_right = 285.0
+margin_bottom = 22.0
 custom_fonts/font = SubResource( 27 )
-text = "TIMER"
+text = "Time left: "
 
 [node name="Timer" type="Timer" parent="HUD/Countdown"]
 
