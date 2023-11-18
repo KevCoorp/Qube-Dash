@@ -353,7 +353,7 @@ font_data = ExtResource( 12 )
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 20.375, 174.75 )
 
-[node name="World" type="Node2D"]
+[node name="Level1" type="Node2D"]
 position = Vector2( 20, 0 )
 script = ExtResource( 5 )
 
@@ -376,7 +376,7 @@ __meta__ = {
 JUMP_FORCE = -160
 
 [node name="Sun" type="Sprite" parent="."]
-position = Vector2( 360, -23 )
+position = Vector2( 360, -12 )
 scale = Vector2( 0.734512, 0.742762 )
 z_index = -2
 texture = ExtResource( 3 )

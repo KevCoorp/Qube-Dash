@@ -29,7 +29,8 @@ target_level_path = "res://Level/Level2.tscn"
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 8, 0 )
 frames = SubResource( 2 )
-animation = "Uncheck"
+animation = "Check"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
