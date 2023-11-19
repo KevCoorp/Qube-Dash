@@ -11,12 +11,12 @@ animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "Check",
-"speed": 2.0
+"speed": 1.0
 }, {
 "frames": [ ExtResource( 1 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "Uncheck",
-"speed": 2.0
+"speed": 1.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -29,13 +29,15 @@ target_level_path = "res://Level/Level2.tscn"
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 8, 0 )
 frames = SubResource( 2 )
-animation = "Check"
-frame = 1
+animation = "Uncheck"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2( 6.5, -1 )
 shape = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+process_mode = 0
+one_shot = true
 
 [connection signal="body_entered" from="." to="." method="_on_NextLevel_body_entered"]
