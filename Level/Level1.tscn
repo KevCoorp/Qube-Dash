@@ -1,9 +1,8 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://HUD/Misc/HUD_Coin.png" type="Texture" id=1]
 [ext_resource path="res://Textures/Environment/cloud.png" type="Texture" id=2]
 [ext_resource path="res://Textures/Environment/sun.png" type="Texture" id=3]
-[ext_resource path="res://Script/Countdown.gd" type="Script" id=4]
 [ext_resource path="res://Level1.gd" type="Script" id=5]
 [ext_resource path="res://Textures/Tiles/tiles_packed.png" type="Texture" id=6]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=7]
@@ -334,10 +333,6 @@ points = PoolVector2Array( 0, 0, 18, 0, 18, 18, 0, 18 )
 7/shapes = [  ]
 7/z_index = 0
 
-[sub_resource type="DynamicFont" id=27]
-size = 7
-font_data = ExtResource( 12 )
-
 [sub_resource type="DynamicFont" id=26]
 size = 7
 font_data = ExtResource( 12 )
@@ -476,22 +471,6 @@ position = Vector2( 1805, 82 )
 [node name="HUD" type="CanvasLayer" parent="."]
 script = ExtResource( 11 )
 
-[node name="Countdown" type="Control" parent="HUD"]
-margin_right = 40.0
-margin_bottom = 40.0
-script = ExtResource( 4 )
-
-[node name="Label" type="Label" parent="HUD/Countdown"]
-visible = false
-margin_left = 235.0
-margin_top = 7.0
-margin_right = 312.0
-margin_bottom = 21.0
-custom_fonts/font = SubResource( 27 )
-text = "Time left: "
-
-[node name="Timer" type="Timer" parent="HUD/Countdown"]
-
 [node name="TextureRect" type="TextureRect" parent="HUD"]
 margin_left = 26.0
 margin_top = 20.0
@@ -611,7 +590,6 @@ shape = SubResource( 23 )
 position = Vector2( 2014, -13 )
 shape = SubResource( 23 )
 
-[connection signal="timeout" from="HUD/Countdown/Timer" to="HUD/Countdown" method="_on_Timer_timeout"]
 [connection signal="coin_collected" from="Coins/Coin" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="Coins/Coin2" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="Coins/Coin3" to="HUD" method="_on_coin_collected"]
