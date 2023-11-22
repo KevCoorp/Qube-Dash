@@ -43,13 +43,15 @@ func _physics_process(delta):
 		
 			if velocity.y > 0:
 				velocity.y += ADDITIONAL_FALL_GRAVITY
+				
+	# DEBUG
+	if Input.is_action_pressed("ui_escape"):
+		get_tree().change_scene("res://Level/Level2.tscn")
 	
 	
 	velocity = move_and_slide(velocity, Vector2.UP)
 	
 	velocity.x = lerp(velocity.x,0,0.2)
-	
-	
 
 # Fonctions
 
@@ -76,7 +78,3 @@ func _on_JumpBufferTimer_timeout():
 	
 func _add_coin():
 	coins += 1
-
-
-func _on_death_timer_timeout():
-	get_tree().reload_current_scene()
