@@ -1,8 +1,9 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://HUD/Misc/HUD_Coin.png" type="Texture" id=1]
 [ext_resource path="res://Textures/Environment/cloud.png" type="Texture" id=2]
 [ext_resource path="res://Textures/Environment/sun.png" type="Texture" id=3]
+[ext_resource path="res://Textures/Environment/tree2.png" type="Texture" id=4]
 [ext_resource path="res://Level1.gd" type="Script" id=5]
 [ext_resource path="res://Textures/Tiles/tiles_packed.png" type="Texture" id=6]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=7]
@@ -420,8 +421,16 @@ z_index = -4
 texture = ExtResource( 14 )
 
 [node name="Tree2" type="Sprite" parent="Tree"]
-position = Vector2( 211.31, 2.75862 )
-texture = ExtResource( 14 )
+position = Vector2( 227.862, 14.3448 )
+scale = Vector2( 0.853448, 0.853448 )
+texture = ExtResource( 4 )
+offset = Vector2( -12.2828, -10.9899 )
+
+[node name="Tree9" type="Sprite" parent="Tree"]
+position = Vector2( 822.069, 14.3448 )
+scale = Vector2( 1.2628, 1.2628 )
+texture = ExtResource( 4 )
+offset = Vector2( -12.2828, -10.9899 )
 
 [node name="Tree3" type="Sprite" parent="Tree"]
 position = Vector2( 385.103, 0 )
