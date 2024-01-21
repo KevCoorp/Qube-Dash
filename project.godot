@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Qube Dash"
-run/main_scene="res://Level/Level1.tscn"
+run/main_scene="res://Menu/MainMenu.tscn"
 boot_splash/image="res://Splash/splash.png"
 config/icon="res://icon.png"
 

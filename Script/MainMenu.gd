@@ -56,6 +56,10 @@ func _on_Music_value_changed(value):
 func _on_SFX_value_changed(value):
 	volume(2, value)
 	
+func _on_BackAudio_pressed():
+	show_and_hide(settings, audio)
+
+	
 # Video settings
 
 func _on_Video_pressed():
