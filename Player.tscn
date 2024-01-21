@@ -23,6 +23,7 @@ shape = SubResource( 3 )
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 limit_left = 0
+limit_smoothed = true
 script = ExtResource( 3 )
 
 [node name="JumpBufferTimer" type="Timer" parent="."]

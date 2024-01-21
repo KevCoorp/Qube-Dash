@@ -45,7 +45,7 @@ func _physics_process(delta):
 				velocity.y += ADDITIONAL_FALL_GRAVITY
 				
 	# DEBUG
-	if Input.is_action_pressed("ui_escape"):
+	if Input.is_action_pressed("debug"):
 		get_tree().change_scene("res://Level/Level2.tscn")
 	
 	
