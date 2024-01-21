@@ -1,0 +1,198 @@
+[gd_scene format=2]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -31.5
+margin_top = -34.0
+margin_right = 31.5
+margin_bottom = 34.0
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+margin_right = 63.0
+margin_bottom = 20.0
+text = "Start"
+
+[node name="Settings" type="Button" parent="VBoxContainer"]
+margin_top = 24.0
+margin_right = 63.0
+margin_bottom = 44.0
+text = "Settings"
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+margin_top = 48.0
+margin_right = 63.0
+margin_bottom = 68.0
+text = "Exit"
+
+[node name="Settings" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -37.5
+margin_top = -34.0
+margin_right = 37.5
+margin_bottom = 34.0
+
+[node name="Video" type="Button" parent="Settings/VBoxContainer"]
+margin_right = 75.0
+margin_bottom = 20.0
+text = "Video"
+
+[node name="Audio" type="Button" parent="Settings/VBoxContainer"]
+margin_top = 48.0
+margin_right = 75.0
+margin_bottom = 68.0
+text = "Audio"
+
+[node name="BackSettings" type="Button" parent="Settings"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -20.0
+margin_right = 42.0
+text = "Back"
+
+[node name="Video" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Video"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -48.5
+margin_top = -40.0
+margin_right = 48.5
+margin_bottom = 40.0
+
+[node name="Labels" type="VBoxContainer" parent="Video/HBoxContainer"]
+margin_right = 69.0
+margin_bottom = 80.0
+
+[node name="FullScreen" type="Label" parent="Video/HBoxContainer/Labels"]
+margin_top = 5.0
+margin_right = 69.0
+margin_bottom = 19.0
+size_flags_vertical = 6
+text = "Fullscreen"
+
+[node name="Borderless" type="Label" parent="Video/HBoxContainer/Labels"]
+margin_top = 33.0
+margin_right = 69.0
+margin_bottom = 47.0
+size_flags_vertical = 6
+text = "Borderless"
+
+[node name="VSync" type="Label" parent="Video/HBoxContainer/Labels"]
+margin_top = 61.0
+margin_right = 69.0
+margin_bottom = 75.0
+size_flags_vertical = 6
+text = "VSync"
+
+[node name="Checks" type="VBoxContainer" parent="Video/HBoxContainer"]
+margin_left = 73.0
+margin_right = 97.0
+margin_bottom = 80.0
+
+[node name="FullScreen" type="CheckBox" parent="Video/HBoxContainer/Checks"]
+margin_right = 24.0
+margin_bottom = 24.0
+
+[node name="Borderless" type="CheckBox" parent="Video/HBoxContainer/Checks"]
+margin_top = 28.0
+margin_right = 24.0
+margin_bottom = 52.0
+
+[node name="VSync" type="CheckBox" parent="Video/HBoxContainer/Checks"]
+margin_top = 56.0
+margin_right = 24.0
+margin_bottom = 80.0
+
+[node name="BackVideo" type="Button" parent="Video"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -20.0
+margin_right = 42.0
+text = "Back"
+
+[node name="Audio" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Audio"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -70.0
+margin_top = -28.0
+margin_right = 70.0
+margin_bottom = 28.0
+
+[node name="Labels" type="VBoxContainer" parent="Audio/HBoxContainer"]
+margin_right = 58.0
+margin_bottom = 56.0
+
+[node name="Master" type="Label" parent="Audio/HBoxContainer/Labels"]
+margin_top = 1.0
+margin_right = 58.0
+margin_bottom = 15.0
+size_flags_vertical = 6
+text = "Master"
+
+[node name="Sound" type="Label" parent="Audio/HBoxContainer/Labels"]
+margin_top = 21.0
+margin_right = 58.0
+margin_bottom = 35.0
+size_flags_vertical = 6
+text = "Sound"
+
+[node name="Sound FX" type="Label" parent="Audio/HBoxContainer/Labels"]
+margin_top = 41.0
+margin_right = 58.0
+margin_bottom = 55.0
+size_flags_vertical = 6
+text = "Sound FX"
+
+[node name="Slider" type="VBoxContainer" parent="Audio/HBoxContainer"]
+margin_left = 62.0
+margin_right = 140.0
+margin_bottom = 56.0
+size_flags_horizontal = 3
+
+[node name="Master" type="HSlider" parent="Audio/HBoxContainer/Slider"]
+margin_right = 78.0
+margin_bottom = 16.0
+
+[node name="Sound" type="HSlider" parent="Audio/HBoxContainer/Slider"]
+margin_top = 20.0
+margin_right = 78.0
+margin_bottom = 36.0
+
+[node name="Sound FX" type="HSlider" parent="Audio/HBoxContainer/Slider"]
+margin_top = 40.0
+margin_right = 78.0
+margin_bottom = 56.0
+
+[node name="BackAudio" type="Button" parent="Audio"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -20.0
+margin_right = 42.0
+text = "Back"
