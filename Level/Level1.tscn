@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://HUD/Misc/HUD_Coin.png" type="Texture" id=1]
 [ext_resource path="res://Textures/Environment/cloud.png" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://NextLevel.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Textures/Environment/tree.png" type="Texture" id=14]
 [ext_resource path="res://Menu/MainMenu.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Audio/bgm/overworld.mp3" type="AudioStream" id=16]
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 18, 18, 0, 18, 0, 0, 18, 0 )
@@ -604,6 +605,10 @@ shape = SubResource( 23 )
 [node name="fall5" type="CollisionShape2D" parent="fallzone"]
 position = Vector2( 2014, -13 )
 shape = SubResource( 23 )
+
+[node name="Overworld" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 16 )
+autoplay = true
 
 [connection signal="coin_collected" from="Coins/Coin" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="Coins/Coin2" to="HUD" method="_on_coin_collected"]

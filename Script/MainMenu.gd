@@ -8,12 +8,10 @@ onready var audio = $Audio
 func _process(delta):
 	if Input.is_action_just_pressed("ui_escape"):
 		toggle()
-
+		
 func toggle():
 	visible = !visible	
 	get_tree().paused = visible
-
-
 
 func _on_Start_pressed():
 	toggle()
@@ -35,26 +33,14 @@ func _on_Exit_pressed():
 
 # Settings menu 
 
-
 func _on_BackSettings_pressed():
 	show_and_hide(menu, settings)
-
 
 # Audio settings
 func _on_Audio_pressed():
 	show_and_hide(audio, settings)
 	
-func _on_Master_value_changed(value):
-	volume(0, value)
-	
-func volume(bus_index, value):
-	AudioServer.set_bus_volume_db(bus_index, value)
 
-func _on_Music_value_changed(value):
-	volume(1, value)
-
-func _on_SFX_value_changed(value):
-	volume(2, value)
 	
 func _on_BackAudio_pressed():
 	show_and_hide(settings, audio)
@@ -78,6 +64,11 @@ func _on_BackVideo_pressed():
 	show_and_hide(settings, video)
 
 
+func _on_Music_value_changed(value: float) -> void:
+	set_bus_volume(1, value)
 
+func set_bus_volume(bus_index: int, value: float) -> void:
+		AudioServer.set_bus_volume_db(bus_index, linear2db(value))
+		AudioServer.set_bus_mute (bus_index, value < 0.01)
 
 
