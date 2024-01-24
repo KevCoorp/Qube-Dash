@@ -610,6 +610,10 @@ shape = SubResource( 23 )
 stream = ExtResource( 16 )
 autoplay = true
 
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( 1149.25, 27.5 )
+scale = Vector2( 136.675, 27.75 )
+
 [connection signal="coin_collected" from="Coins/Coin" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="Coins/Coin2" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="Coins/Coin3" to="HUD" method="_on_coin_collected"]
