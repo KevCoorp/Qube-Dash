@@ -27,7 +27,6 @@ scale = Vector2( 0.570313, 0.570313 )
 texture = ExtResource( 3 )
 
 [node name="Menu" type="VBoxContainer" parent="."]
-visible = false
 anchor_bottom = 1.0
 margin_left = 10.0
 margin_top = 100.0
@@ -80,8 +79,10 @@ text = "Audio"
 [node name="BackSettings" type="Button" parent="Settings"]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_top = -20.0
-margin_right = 42.0
+margin_left = 8.0
+margin_top = -28.0
+margin_right = 50.0
+margin_bottom = -8.0
 text = "Back"
 
 [node name="Video" type="Control" parent="."]
@@ -146,11 +147,14 @@ margin_bottom = 80.0
 [node name="BackVideo" type="Button" parent="Video"]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_top = -20.0
-margin_right = 42.0
+margin_left = 8.0
+margin_top = -28.0
+margin_right = 50.0
+margin_bottom = -8.0
 text = "Back"
 
 [node name="Audio" type="Control" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 
@@ -214,8 +218,10 @@ margin_bottom = 56.0
 [node name="BackAudio" type="Button" parent="Audio"]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_top = -20.0
-margin_right = 42.0
+margin_left = 8.0
+margin_top = -28.0
+margin_right = 50.0
+margin_bottom = -8.0
 text = "Back"
 
 [node name="MainMenu" type="AudioStreamPlayer2D" parent="."]
