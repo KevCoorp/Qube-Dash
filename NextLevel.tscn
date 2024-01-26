@@ -30,6 +30,7 @@ target_level_path = "res://Level/Level2.tscn"
 position = Vector2( 8, 0 )
 frames = SubResource( 2 )
 animation = "Uncheck"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

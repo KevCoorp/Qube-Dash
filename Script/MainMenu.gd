@@ -17,7 +17,6 @@ func _on_Start_pressed():
 	toggle()
 	get_tree().change_scene("res://Level/Level1.tscn")
 
-
 # Main menu settings 
 
 func _on_Settings_pressed():
