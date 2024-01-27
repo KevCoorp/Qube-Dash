@@ -62,12 +62,12 @@ anchor_bottom = 1.0
 color = Color( 0.137255, 0.415686, 0.85098, 1 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 263.0
+margin_left = 284.0
 margin_top = 169.0
-margin_right = 335.0
+margin_right = 356.0
 margin_bottom = 183.0
 custom_fonts/font = SubResource( 11 )
-text = "Alpha 0.4"
+text = "Indev "
 
 [node name="Cloud" type="Sprite" parent="."]
 position = Vector2( 281, 44 )
@@ -80,7 +80,6 @@ scale = Vector2( 0.570313, 0.570313 )
 texture = ExtResource( 3 )
 
 [node name="Menu" type="VBoxContainer" parent="."]
-visible = false
 anchor_top = 1.0
 anchor_bottom = 1.0
 margin_left = 8.0
@@ -264,6 +263,7 @@ text = "Back"
 flat = true
 
 [node name="Audio" type="Control" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 

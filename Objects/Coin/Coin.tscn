@@ -103,15 +103,15 @@ frame = 152
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
+[node name="SoundCoinCollect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -8.0
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "default"
 anims/RESET = SubResource( 2 )
 anims/default = SubResource( 3 )
 anims/pick_up = SubResource( 4 )
-
-[node name="SoundCoinCollect" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
-volume_db = -8.0
 
 [connection signal="body_entered" from="." to="." method="_on_Coin_body_entered"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
