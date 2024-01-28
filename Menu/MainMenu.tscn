@@ -64,20 +64,10 @@ color = Color( 0.137255, 0.415686, 0.85098, 1 )
 [node name="Label" type="Label" parent="."]
 margin_left = 284.0
 margin_top = 169.0
-margin_right = 356.0
-margin_bottom = 183.0
+margin_right = 428.0
+margin_bottom = 175.0
 custom_fonts/font = SubResource( 11 )
 text = "Indev "
-
-[node name="Cloud" type="Sprite" parent="."]
-position = Vector2( 281, 44 )
-scale = Vector2( 0.570313, 0.570313 )
-texture = ExtResource( 4 )
-
-[node name="Sun" type="Sprite" parent="."]
-position = Vector2( 252, 33 )
-scale = Vector2( 0.570313, 0.570313 )
-texture = ExtResource( 3 )
 
 [node name="Menu" type="VBoxContainer" parent="."]
 anchor_top = 1.0
@@ -131,6 +121,16 @@ enabled_focus_mode = 0
 text = "Exit"
 flat = true
 align = 0
+
+[node name="Cloud" type="Sprite" parent="Menu"]
+position = Vector2( 269, -58 )
+scale = Vector2( 0.570313, 0.570313 )
+texture = ExtResource( 4 )
+
+[node name="Sun" type="Sprite" parent="Menu"]
+position = Vector2( 244, -63 )
+scale = Vector2( 0.570313, 0.570313 )
+texture = ExtResource( 3 )
 
 [node name="Settings" type="Control" parent="."]
 visible = false
