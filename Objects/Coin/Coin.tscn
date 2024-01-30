@@ -106,6 +106,7 @@ shape = SubResource( 1 )
 [node name="SoundCoinCollect" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 volume_db = -8.0
+bus = "SFX"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "default"
