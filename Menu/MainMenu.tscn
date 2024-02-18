@@ -123,12 +123,12 @@ flat = true
 align = 0
 
 [node name="Cloud" type="Sprite" parent="Menu"]
-position = Vector2( 269, -58 )
+position = Vector2( 270, -52 )
 scale = Vector2( 0.570313, 0.570313 )
 texture = ExtResource( 4 )
 
 [node name="Sun" type="Sprite" parent="Menu"]
-position = Vector2( 244, -63 )
+position = Vector2( 245, -61 )
 scale = Vector2( 0.570313, 0.570313 )
 texture = ExtResource( 3 )
 
