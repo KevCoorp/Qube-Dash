@@ -575,33 +575,33 @@ margin_bottom = 37.0
 custom_fonts/font = SubResource( 2 )
 text = "00"
 
-[node name="Coins" type="Node2D" parent="."]
+[node name="Coin" type="Node2D" parent="."]
 
-[node name="Coin" parent="Coins" instance=ExtResource( 10 )]
+[node name="Coin" parent="Coin" instance=ExtResource( 10 )]
 position = Vector2( 225, 27 )
 collision_mask = 2
 
-[node name="Coin2" parent="Coins" instance=ExtResource( 10 )]
+[node name="Coin2" parent="Coin" instance=ExtResource( 10 )]
 position = Vector2( 479, 42 )
 collision_layer = 8
 collision_mask = 2
 
-[node name="Coin3" parent="Coins" instance=ExtResource( 10 )]
+[node name="Coin3" parent="Coin" instance=ExtResource( 10 )]
 position = Vector2( 739, -27 )
 collision_layer = 8
 collision_mask = 2
 
-[node name="Coin6" parent="Coins" instance=ExtResource( 10 )]
+[node name="Coin6" parent="Coin" instance=ExtResource( 10 )]
 position = Vector2( 973, -26 )
 collision_layer = 8
 collision_mask = 2
 
-[node name="Coin4" parent="Coins" instance=ExtResource( 10 )]
+[node name="Coin4" parent="Coin" instance=ExtResource( 10 )]
 position = Vector2( 1314, 83 )
 collision_layer = 8
 collision_mask = 2
 
-[node name="Coin5" parent="Coins" instance=ExtResource( 10 )]
+[node name="Coin5" parent="Coin" instance=ExtResource( 10 )]
 position = Vector2( 1603, 36 )
 collision_layer = 8
 collision_mask = 2
@@ -679,10 +679,10 @@ cell_size = Vector2( 18, 18 )
 format = 1
 tile_data = PoolIntArray( 65654, 0, 65537, 65655, 0, 65539, 131183, 0, 65537, 131184, 0, 65539, 131189, 0, 65537, 131190, 0, 65541, 131191, 0, 65540, 131192, 0, 65539, 196719, 0, 393217, 196720, 0, 65540, 196721, 0, 65538, 196722, 0, 65538, 196723, 0, 65538, 196724, 0, 65538, 196725, 0, 65541, 196726, 0, 393218, 196727, 0, 393218, 196728, 0, 393219, 262255, 0, 393217, 262256, 0, 393218, 262257, 0, 393218, 262258, 0, 393218, 262259, 0, 393218, 262260, 0, 393218, 262261, 0, 393218, 262262, 0, 393218, 262263, 0, 393218, 262264, 0, 393219, 327791, 0, 458753, 327792, 0, 458754, 327793, 0, 458754, 327794, 0, 0, 327795, 0, 458754, 327796, 0, 5, 327797, 0, 393218, 327798, 0, 393218, 327799, 0, 393218, 327800, 0, 393219, 393330, 0, 458752, 393332, 0, 458753, 393333, 0, 458754, 393334, 0, 458754, 393335, 0, 458754, 393336, 0, 458755 )
 
-[connection signal="coin_collected" from="Coins/Coin" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="Coins/Coin2" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="Coins/Coin3" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="Coins/Coin6" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="Coins/Coin4" to="HUD" method="_on_coin_collected"]
-[connection signal="coin_collected" from="Coins/Coin5" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coin/Coin" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coin/Coin2" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coin/Coin3" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coin/Coin6" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coin/Coin4" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coin/Coin5" to="HUD" method="_on_coin_collected"]
 [connection signal="body_entered" from="fallzone" to="Player" method="_on_fallzone_body_entered"]

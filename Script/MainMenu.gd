@@ -17,7 +17,6 @@ func _on_Start_pressed():
 	toggle()
 	get_tree().change_scene("res://Level/Level1.tscn")
 	
-
 # Main menu settings 
 
 func _on_Settings_pressed():
@@ -29,7 +28,6 @@ func show_and_hide(first, second):
 
 func _on_Exit_pressed():
 	get_tree().quit()
-
 
 # Settings menu 
 

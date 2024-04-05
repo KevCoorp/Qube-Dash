@@ -180,6 +180,70 @@ position = Vector2( 1585, -71 )
 [node name="Spikes20" parent="Spikes" instance=ExtResource( 9 )]
 position = Vector2( 1602, -71 )
 
+[node name="Tree" type="Sprite" parent="."]
+position = Vector2( 1689, -32 )
+texture = ExtResource( 13 )
+
+[node name="Tree2" type="Sprite" parent="Tree"]
+position = Vector2( -797, 54 )
+texture = ExtResource( 13 )
+
+[node name="Tree_2" type="Sprite" parent="Tree"]
+position = Vector2( -1407, 85 )
+scale = Vector2( 1.76563, 1.76563 )
+z_index = -1
+texture = ExtResource( 7 )
+
+[node name="Tree_3" type="Sprite" parent="Tree"]
+position = Vector2( -725, 11 )
+scale = Vector2( 1.26172, 1.26172 )
+z_index = -4
+texture = ExtResource( 7 )
+
+[node name="Tree_4" type="Sprite" parent="Tree"]
+position = Vector2( 174, -26 )
+scale = Vector2( 1.26172, 1.26172 )
+z_index = -4
+texture = ExtResource( 7 )
+
+[node name="Cloud" type="Sprite" parent="."]
+position = Vector2( 677, -52 )
+z_index = -13
+texture = ExtResource( 11 )
+
+[node name="Cloud2" type="Sprite" parent="Cloud"]
+position = Vector2( 430, -8 )
+z_index = -13
+texture = ExtResource( 11 )
+
+[node name="Cloud3" type="Sprite" parent="Cloud"]
+position = Vector2( -484, 43 )
+scale = Vector2( 0.625, 0.625 )
+z_index = -13
+texture = ExtResource( 11 )
+
+[node name="Cloud4" type="Sprite" parent="Cloud"]
+position = Vector2( 952, 21 )
+scale = Vector2( 0.625, 0.625 )
+z_index = -13
+texture = ExtResource( 11 )
+
+[node name="Cloud5" type="Sprite" parent="Cloud"]
+position = Vector2( 1277, -15 )
+scale = Vector2( 0.625, 0.625 )
+z_index = -13
+texture = ExtResource( 11 )
+
+[node name="Cloud6" type="Sprite" parent="Cloud"]
+position = Vector2( 1702, -45 )
+scale = Vector2( 0.625, 0.625 )
+z_index = -13
+texture = ExtResource( 11 )
+
+[node name="Sun" type="Sprite" parent="."]
+position = Vector2( 880, -49 )
+texture = ExtResource( 8 )
+
 [node name="HUD" type="CanvasLayer" parent="."]
 script = ExtResource( 5 )
 
@@ -215,95 +279,31 @@ margin_bottom = 37.0
 custom_fonts/font = SubResource( 3 )
 text = "00"
 
-[node name="Tree_2" type="Sprite" parent="."]
-position = Vector2( 282, 53 )
-scale = Vector2( 1.76563, 1.76563 )
-z_index = -1
-texture = ExtResource( 7 )
+[node name="Coin" type="Node2D" parent="."]
 
-[node name="Tree_3" type="Sprite" parent="."]
-position = Vector2( 964, -21 )
-scale = Vector2( 1.26172, 1.26172 )
-z_index = -4
-texture = ExtResource( 7 )
-
-[node name="Tree_4" type="Sprite" parent="."]
-position = Vector2( 1863, -58 )
-scale = Vector2( 1.26172, 1.26172 )
-z_index = -4
-texture = ExtResource( 7 )
-
-[node name="Cloud" type="Sprite" parent="."]
-position = Vector2( 677, -52 )
-z_index = -13
-texture = ExtResource( 11 )
-
-[node name="Cloud2" type="Sprite" parent="."]
-position = Vector2( 1107, -60 )
-z_index = -13
-texture = ExtResource( 11 )
-
-[node name="Cloud3" type="Sprite" parent="."]
-position = Vector2( 193, -9 )
-scale = Vector2( 0.625, 0.625 )
-z_index = -13
-texture = ExtResource( 11 )
-
-[node name="Cloud4" type="Sprite" parent="."]
-position = Vector2( 1629, -31 )
-scale = Vector2( 0.625, 0.625 )
-z_index = -13
-texture = ExtResource( 11 )
-
-[node name="Cloud5" type="Sprite" parent="."]
-position = Vector2( 1954, -67 )
-scale = Vector2( 0.625, 0.625 )
-z_index = -13
-texture = ExtResource( 11 )
-
-[node name="Cloud6" type="Sprite" parent="."]
-position = Vector2( 2379, -97 )
-scale = Vector2( 0.625, 0.625 )
-z_index = -13
-texture = ExtResource( 11 )
-
-[node name="Sun" type="Sprite" parent="."]
-position = Vector2( 880, -49 )
-texture = ExtResource( 8 )
-
-[node name="Coins" type="Node2D" parent="."]
-
-[node name="Coin" parent="Coins" instance=ExtResource( 10 )]
+[node name="Coin" parent="Coin" instance=ExtResource( 10 )]
 position = Vector2( 963, 18 )
 collision_mask = 2
 
-[node name="Coin2" parent="Coins" instance=ExtResource( 10 )]
+[node name="Coin2" parent="Coin" instance=ExtResource( 10 )]
 position = Vector2( 392, 64 )
 collision_mask = 2
 
-[node name="Coin3" parent="Coins" instance=ExtResource( 10 )]
+[node name="Coin3" parent="Coin" instance=ExtResource( 10 )]
 position = Vector2( 1451, 18 )
 collision_mask = 2
 
-[node name="Coin4" parent="Coins" instance=ExtResource( 10 )]
+[node name="Coin4" parent="Coin" instance=ExtResource( 10 )]
 position = Vector2( 1754, 11 )
 collision_mask = 2
 
-[node name="Coin5" parent="Coins" instance=ExtResource( 10 )]
+[node name="Coin5" parent="Coin" instance=ExtResource( 10 )]
 position = Vector2( 2358, -62 )
 collision_mask = 2
 
-[node name="Coin6" parent="Coins" instance=ExtResource( 10 )]
+[node name="Coin6" parent="Coin" instance=ExtResource( 10 )]
 position = Vector2( 2474, -24 )
 collision_mask = 2
-
-[node name="Tree" type="Sprite" parent="."]
-position = Vector2( 1689, -32 )
-texture = ExtResource( 13 )
-
-[node name="Tree2" type="Sprite" parent="."]
-position = Vector2( 892, 22 )
-texture = ExtResource( 13 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 14 )

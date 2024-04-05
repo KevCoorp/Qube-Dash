@@ -6,7 +6,6 @@ var bg = Color("#3363CD")
 
 onready var visibility_notifier := $VisibilityNotifier2D
 
-
 func _ready() -> void:
 	VisualServer.set_default_clear_color(bg)
 	visibility_notifier.connect("screen_entered", self, "show")
