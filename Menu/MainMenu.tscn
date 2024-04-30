@@ -1,10 +1,12 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Script/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Audio/bgm/mainmenu.mp3" type="AudioStream" id=2]
 [ext_resource path="res://Textures/Environment/sun.png" type="Texture" id=3]
 [ext_resource path="res://Textures/Environment/cloud.png" type="Texture" id=4]
 [ext_resource path="res://HUD/Fonts/PressStart2P-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Textures/UI/Settings/grabber_hover.png" type="Texture" id=6]
+[ext_resource path="res://Textures/UI/Settings/grabber_normal.png" type="Texture" id=7]
 
 [sub_resource type="DynamicFont" id=11]
 size = 6
@@ -48,6 +50,27 @@ font_path = "res://HUD/Fonts/PressStart2P-Regular.ttf"
 size = 8
 font_data = SubResource( 5 )
 
+[sub_resource type="StyleBoxFlat" id=18]
+border_color = Color( 0.211765, 0.211765, 0.211765, 1 )
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0.211765, 0.211765, 0.211765, 1 )
+border_color = Color( 0.211765, 0.211765, 0.211765, 1 )
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_top = 7
+border_color = Color( 1, 1, 1, 1 )
+border_blend = true
+
+[sub_resource type="Theme" id=17]
+HSlider/icons/grabber = ExtResource( 7 )
+HSlider/icons/grabber_highlight = ExtResource( 6 )
+HSlider/styles/grabber_area = SubResource( 18 )
+HSlider/styles/grabber_area_highlight = SubResource( 19 )
+HSlider/styles/slider = SubResource( 16 )
+
 [sub_resource type="StyleBoxTexture" id=15]
 
 [node name="MainMenu" type="Control"]
@@ -70,6 +93,7 @@ custom_fonts/font = SubResource( 11 )
 text = "Indev "
 
 [node name="Menu" type="VBoxContainer" parent="."]
+visible = false
 anchor_top = 1.0
 anchor_bottom = 1.0
 margin_left = 8.0
@@ -263,44 +287,46 @@ text = "Back"
 flat = true
 
 [node name="Audio" type="Control" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 1.0
+margin_bottom = 1.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Audio"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -70.0
-margin_top = -28.0
-margin_right = 70.0
-margin_bottom = 28.0
+anchor_left = 0.28125
+anchor_top = 0.344444
+anchor_right = 0.71875
+anchor_bottom = 0.588889
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Labels" type="VBoxContainer" parent="Audio/HBoxContainer"]
 margin_right = 48.0
-margin_bottom = 56.0
+margin_bottom = 44.0
 
 [node name="Master" type="Label" parent="Audio/HBoxContainer/Labels"]
-margin_top = 4.0
+margin_top = 2.0
 margin_right = 48.0
-margin_bottom = 12.0
+margin_bottom = 10.0
 size_flags_vertical = 6
 custom_fonts/font = SubResource( 6 )
 text = "Master"
 
 [node name="Music" type="Label" parent="Audio/HBoxContainer/Labels"]
-margin_top = 24.0
+margin_top = 18.0
 margin_right = 48.0
-margin_bottom = 32.0
+margin_bottom = 26.0
 size_flags_vertical = 6
 custom_fonts/font = SubResource( 6 )
 text = "Music"
 
 [node name="SFX" type="Label" parent="Audio/HBoxContainer/Labels"]
-margin_top = 44.0
+margin_top = 34.0
 margin_right = 48.0
-margin_bottom = 52.0
+margin_bottom = 42.0
 size_flags_vertical = 6
 custom_fonts/font = SubResource( 6 )
 text = "SFX"
@@ -308,26 +334,27 @@ text = "SFX"
 [node name="Slider" type="VBoxContainer" parent="Audio/HBoxContainer"]
 margin_left = 52.0
 margin_right = 140.0
-margin_bottom = 56.0
+margin_bottom = 44.0
 size_flags_horizontal = 3
+theme = SubResource( 17 )
 
 [node name="Master" type="HSlider" parent="Audio/HBoxContainer/Slider"]
 margin_right = 88.0
-margin_bottom = 16.0
+margin_bottom = 12.0
 custom_styles/grabber_area = SubResource( 15 )
 max_value = 5.0
 
 [node name="Music" type="HSlider" parent="Audio/HBoxContainer/Slider"]
-margin_top = 20.0
+margin_top = 16.0
 margin_right = 88.0
-margin_bottom = 36.0
+margin_bottom = 28.0
 custom_styles/grabber_area = SubResource( 15 )
 max_value = 3.0
 
 [node name="SFX" type="HSlider" parent="Audio/HBoxContainer/Slider"]
-margin_top = 40.0
+margin_top = 32.0
 margin_right = 88.0
-margin_bottom = 56.0
+margin_bottom = 44.0
 custom_styles/grabber_area = SubResource( 15 )
 
 [node name="BackAudio" type="Button" parent="Audio"]
