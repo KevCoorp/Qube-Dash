@@ -5,15 +5,15 @@
 [ext_resource path="res://HUD/Fonts/PressStart2P-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://HUD/Misc/HUD_Coin.png" type="Texture" id=4]
 [ext_resource path="res://HUD.gd" type="Script" id=5]
-[ext_resource path="res://Textures/Tiles/tiles_packed.png" type="Texture" id=6]
-[ext_resource path="res://Textures/Environment/tree2.png" type="Texture" id=7]
-[ext_resource path="res://Textures/Environment/sun.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Textures/Tiles/tiles_packed.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Textures/Environment/tree2.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Textures/Environment/sun.png" type="Texture" id=8]
 [ext_resource path="res://Enenmies/Spikes/Spikes.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Objects/Coin/Coin.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Textures/Environment/cloud.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Items/Coin/Coin.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assets/Textures/Environment/cloud.png" type="Texture" id=11]
 [ext_resource path="res://Enenmies/Enemy/WalkingEnemy.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Textures/Environment/tree.png" type="Texture" id=13]
-[ext_resource path="res://Audio/bgm/overworld 2.mp3" type="AudioStream" id=14]
+[ext_resource path="res://Assets/Textures/Environment/tree.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Audio/bgm/overworld 2.mp3" type="AudioStream" id=14]
 [ext_resource path="res://NextLevel.tscn" type="PackedScene" id=15]
 
 [sub_resource type="TileSet" id=4]
@@ -311,3 +311,5 @@ autoplay = true
 
 [node name="NextLevel" parent="." instance=ExtResource( 15 )]
 position = Vector2( 2645, -47 )
+
+[connection signal="coin_collected" from="Coin/Coin" to="HUD" method="_on_Coin_coin_collected"]

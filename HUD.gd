@@ -8,5 +8,3 @@ func _ready():
 func _on_coin_collected():
 	coins = coins + 1
 	_ready()
-
-

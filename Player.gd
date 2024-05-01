@@ -4,12 +4,12 @@ class_name Player
 export(int) var JUMP_FORCE = -140 # Force du saut
 export(int) var JUMP_RELEASE_FORCE = -70 
 export(int) var MAX_SPEED = 50 # Vitesse max
-export(int) var ACCELERATION = 10 
-export(int) var FRICTION = 10
-export(int) var GRAVITY = 4 
-export(int) var ADDITIONAL_FALL_GRAVITY = 4 
+export(int) var ACCELERATION = 10 # Accélératiojn
+export(int) var FRICTION = 10 # Friction
+export(int) var GRAVITY = 4  # Gravité
+export(int) var ADDITIONAL_FALL_GRAVITY = 4 # Gravité additionnel 
 
-
+# Variable
 var is_dying = false
 var velocity = Vector2.ZERO
 var coins = 0

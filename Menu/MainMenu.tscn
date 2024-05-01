@@ -1,12 +1,12 @@
 [gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Script/MainMenu.gd" type="Script" id=1]
-[ext_resource path="res://Audio/bgm/mainmenu.mp3" type="AudioStream" id=2]
-[ext_resource path="res://Textures/Environment/sun.png" type="Texture" id=3]
-[ext_resource path="res://Textures/Environment/cloud.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Audio/bgm/mainmenu.mp3" type="AudioStream" id=2]
+[ext_resource path="res://Assets/Textures/Environment/sun.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Textures/Environment/cloud.png" type="Texture" id=4]
 [ext_resource path="res://HUD/Fonts/PressStart2P-Regular.ttf" type="DynamicFontData" id=5]
-[ext_resource path="res://Textures/UI/Settings/grabber_hover.png" type="Texture" id=6]
-[ext_resource path="res://Textures/UI/Settings/grabber_normal.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Textures/UI/Settings/grabber_hover.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Textures/UI/Settings/grabber_normal.png" type="Texture" id=7]
 
 [sub_resource type="DynamicFont" id=11]
 size = 6
@@ -93,7 +93,6 @@ custom_fonts/font = SubResource( 11 )
 text = "Indev "
 
 [node name="Menu" type="VBoxContainer" parent="."]
-visible = false
 anchor_top = 1.0
 anchor_bottom = 1.0
 margin_left = 8.0
@@ -103,7 +102,7 @@ margin_bottom = -5.0
 
 [node name="Qube Dash" type="Label" parent="Menu"]
 margin_right = 144.0
-margin_bottom = 16.0
+margin_bottom = 2.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 0
@@ -112,9 +111,9 @@ custom_fonts/font = SubResource( 9 )
 text = "Qube Dash"
 
 [node name="Start" type="Button" parent="Menu"]
-margin_top = 20.0
+margin_top = 6.0
 margin_right = 144.0
-margin_bottom = 34.0
+margin_bottom = 14.0
 focus_mode = 0
 theme = SubResource( 10 )
 custom_fonts/font = SubResource( 1 )
@@ -125,9 +124,9 @@ flat = true
 align = 0
 
 [node name="Settings" type="Button" parent="Menu"]
-margin_top = 38.0
+margin_top = 18.0
 margin_right = 144.0
-margin_bottom = 52.0
+margin_bottom = 26.0
 focus_mode = 0
 custom_fonts/font = SubResource( 1 )
 enabled_focus_mode = 0
@@ -136,9 +135,9 @@ flat = true
 align = 0
 
 [node name="Exit" type="Button" parent="Menu"]
-margin_top = 56.0
+margin_top = 30.0
 margin_right = 144.0
-margin_bottom = 70.0
+margin_bottom = 38.0
 focus_mode = 0
 custom_fonts/font = SubResource( 1 )
 enabled_focus_mode = 0
@@ -173,15 +172,15 @@ margin_bottom = 42.0
 
 [node name="Video" type="Button" parent="Settings/VBoxContainer"]
 margin_right = 75.0
-margin_bottom = 14.0
+margin_bottom = 8.0
 custom_fonts/font = SubResource( 2 )
 text = "Video"
 flat = true
 
 [node name="Audio" type="Button" parent="Settings/VBoxContainer"]
-margin_top = 18.0
+margin_top = 12.0
 margin_right = 75.0
-margin_bottom = 32.0
+margin_bottom = 20.0
 custom_fonts/font = SubResource( 2 )
 text = "Audio"
 flat = true
@@ -215,36 +214,36 @@ margin_right = 48.5
 margin_bottom = 40.0
 
 [node name="Labels" type="VBoxContainer" parent="Video/HBoxContainer"]
-margin_right = 80.0
+margin_right = 10.0
 margin_bottom = 80.0
 
 [node name="FullScreen" type="Label" parent="Video/HBoxContainer/Labels"]
-margin_top = 8.0
-margin_right = 80.0
-margin_bottom = 16.0
+margin_top = 11.0
+margin_right = 10.0
+margin_bottom = 13.0
 size_flags_vertical = 6
 custom_fonts/font = SubResource( 3 )
 text = "Fullscreen"
 
 [node name="Borderless" type="Label" parent="Video/HBoxContainer/Labels"]
-margin_top = 36.0
-margin_right = 80.0
-margin_bottom = 44.0
+margin_top = 39.0
+margin_right = 10.0
+margin_bottom = 41.0
 size_flags_vertical = 6
 custom_fonts/font = SubResource( 3 )
 text = "Borderless"
 
 [node name="VSync" type="Label" parent="Video/HBoxContainer/Labels"]
-margin_top = 64.0
-margin_right = 80.0
-margin_bottom = 72.0
+margin_top = 67.0
+margin_right = 10.0
+margin_bottom = 69.0
 size_flags_vertical = 6
 custom_fonts/font = SubResource( 3 )
 text = "VSync"
 
 [node name="Checks" type="VBoxContainer" parent="Video/HBoxContainer"]
-margin_left = 84.0
-margin_right = 108.0
+margin_left = 14.0
+margin_right = 38.0
 margin_bottom = 80.0
 
 [node name="FullScreen" type="CheckBox" parent="Video/HBoxContainer/Checks"]
@@ -287,6 +286,7 @@ text = "Back"
 flat = true
 
 [node name="Audio" type="Control" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 1.0
@@ -304,56 +304,56 @@ __meta__ = {
 }
 
 [node name="Labels" type="VBoxContainer" parent="Audio/HBoxContainer"]
-margin_right = 48.0
+margin_right = 6.0
 margin_bottom = 44.0
 
 [node name="Master" type="Label" parent="Audio/HBoxContainer/Labels"]
-margin_top = 2.0
-margin_right = 48.0
-margin_bottom = 10.0
+margin_top = 5.0
+margin_right = 6.0
+margin_bottom = 7.0
 size_flags_vertical = 6
 custom_fonts/font = SubResource( 6 )
 text = "Master"
 
 [node name="Music" type="Label" parent="Audio/HBoxContainer/Labels"]
-margin_top = 18.0
-margin_right = 48.0
-margin_bottom = 26.0
+margin_top = 21.0
+margin_right = 6.0
+margin_bottom = 23.0
 size_flags_vertical = 6
 custom_fonts/font = SubResource( 6 )
 text = "Music"
 
 [node name="SFX" type="Label" parent="Audio/HBoxContainer/Labels"]
-margin_top = 34.0
-margin_right = 48.0
-margin_bottom = 42.0
+margin_top = 37.0
+margin_right = 6.0
+margin_bottom = 39.0
 size_flags_vertical = 6
 custom_fonts/font = SubResource( 6 )
 text = "SFX"
 
 [node name="Slider" type="VBoxContainer" parent="Audio/HBoxContainer"]
-margin_left = 52.0
+margin_left = 10.0
 margin_right = 140.0
 margin_bottom = 44.0
 size_flags_horizontal = 3
 theme = SubResource( 17 )
 
 [node name="Master" type="HSlider" parent="Audio/HBoxContainer/Slider"]
-margin_right = 88.0
+margin_right = 130.0
 margin_bottom = 12.0
 custom_styles/grabber_area = SubResource( 15 )
 max_value = 5.0
 
 [node name="Music" type="HSlider" parent="Audio/HBoxContainer/Slider"]
 margin_top = 16.0
-margin_right = 88.0
+margin_right = 130.0
 margin_bottom = 28.0
 custom_styles/grabber_area = SubResource( 15 )
 max_value = 3.0
 
 [node name="SFX" type="HSlider" parent="Audio/HBoxContainer/Slider"]
 margin_top = 32.0
-margin_right = 88.0
+margin_right = 130.0
 margin_bottom = 44.0
 custom_styles/grabber_area = SubResource( 15 )
 
