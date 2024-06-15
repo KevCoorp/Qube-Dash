@@ -44,14 +44,16 @@ func _physics_process(delta):
 			if velocity.y > 0:
 				velocity.y += ADDITIONAL_FALL_GRAVITY
 				
+	velocity = move_and_slide(velocity, Vector2.UP)
+	velocity.x = lerp(velocity.x,0,0.2)
+				
 	# DEBUG
 	if Input.is_action_pressed("debug"):
-		get_tree().change_scene("res://Level/Level2.tscn")
+		get_tree().change_scene("res://Level/Level2.tscn") 
+		get_tree().change_scene("res://Level/Level3.tscn")
 	
 	
-	velocity = move_and_slide(velocity, Vector2.UP)
-	
-	velocity.x = lerp(velocity.x,0,0.2)
+
 
 # Fonctions
 

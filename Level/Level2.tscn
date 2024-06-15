@@ -274,8 +274,8 @@ text = "x"
 [node name="Coins" type="Label" parent="HUD"]
 margin_left = 43.0
 margin_top = 21.0
-margin_right = 83.0
-margin_bottom = 37.0
+margin_right = 59.0
+margin_bottom = 29.0
 custom_fonts/font = SubResource( 3 )
 text = "00"
 
