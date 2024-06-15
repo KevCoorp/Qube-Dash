@@ -9,9 +9,11 @@
 🎵 - Coins sounds: https://kronbits.itch.io/freesfx
 
 ## Information sur la conception
-<p>🖌️- Graphismes: Aseprite/Paint.NET</p>
-🎹- Audio: BeepBox
-⚙️- Moteur de jeu: Godot Engine (3.5)
+<li>🖌️- Graphismes: Aseprite/Paint.NET</li>
+<li>🎹- Audio: BeepBox</li>
+<li>⚙️- Moteur de jeu: Godot Engine (3.5)</li>
+
+
 
 
  
