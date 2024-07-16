@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhlyc6lksst0f"]
+
+[ext_resource type="Texture2D" uid="uid://cbigny058hdir" path="res://asset/texture/sprite/enemy/spikes/spike.png" id="1_8i11d"]
+[ext_resource type="Script" path="res://scripts/sprite/enemy/spikes/spikes.gd" id="1_617tm"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oy2fq"]
+radius = 7.0
+height = 14.0
+
+[node name="Spikes" type="Area2D"]
+script = ExtResource("1_617tm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_8i11d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("CapsuleShape2D_oy2fq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

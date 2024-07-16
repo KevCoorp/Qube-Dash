@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkaht18mkuoui"]
+
+[ext_resource type="Script" path="res://scripts/fx/trail/trail.gd" id="1_arvx7"]
+
+[sub_resource type="Curve" id="Curve_dgg6u"]
+_data = [Vector2(0, 0.2), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+metadata/_snap_enabled = true
+
+[node name="Trail" type="Line2D"]
+width = 5.0
+width_curve = SubResource("Curve_dgg6u")
+default_color = Color(1, 1, 1, 0.133333)
+sharp_limit = 50.0
+round_precision = 32
+script = ExtResource("1_arvx7")

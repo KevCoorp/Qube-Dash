@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://b5ekbwv7xamgy"]
+
+[ext_resource type="Texture2D" uid="uid://hs6kl211qvdc" path="res://asset/texture/sprite/enemy/floating_enemy/floating_enemy.png" id="1_e1jjr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5jgn8"]
+atlas = ExtResource("1_e1jjr")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nci88"]
+atlas = ExtResource("1_e1jjr")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vwow"]
+atlas = ExtResource("1_e1jjr")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l0xbq"]
+atlas = ExtResource("1_e1jjr")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tio7n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5jgn8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nci88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vwow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l0xbq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ibykc"]
+size = Vector2(21, 31)
+
+[node name="FloatingEnemy" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_tio7n")
+autoplay = "default"
+frame = 1
+frame_progress = 0.489957
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_ibykc")
