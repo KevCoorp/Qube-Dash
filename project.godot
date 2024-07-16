@@ -11,9 +11,10 @@ config_version=5
 [application]
 
 config/name="Qube Dash"
+config/description="A plateformer game with cube "
 run/main_scene="res://scene/game/tutorial/tutorial.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://icon.png"
 
 [input]
 
