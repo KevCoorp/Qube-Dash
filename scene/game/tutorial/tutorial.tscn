@@ -113,6 +113,12 @@ rotation = -3.14159
 scale = Vector2(2.2605, -10.7972)
 shape = SubResource("RectangleShape2D_nvgu3")
 
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Fallzone"]
+position = Vector2(4688.31, 599)
+rotation = -3.14159
+scale = Vector2(2.2605, -10.7972)
+shape = SubResource("RectangleShape2D_nvgu3")
+
 [node name="RedEnemy" parent="." instance=ExtResource("7_76lp4")]
 position = Vector2(1839.87, 432)
 
