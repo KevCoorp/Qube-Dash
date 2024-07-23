@@ -2,13 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/misc/gamemanager/GameManager.gd" id="1_5s2id"]
 
-[node name="GameManager" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="GameManager" type="Node"]
 script = ExtResource("1_5s2id")
 
 [node name="Node" type="Node" parent="."]

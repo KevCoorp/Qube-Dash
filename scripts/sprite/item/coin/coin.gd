@@ -1,4 +1,4 @@
 extends Area2D
 
-func _on_body_entered(body):
+func _on_area_entered(area):
 	pass
