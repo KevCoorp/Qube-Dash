@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cuci3orvsdp1u"]
+[gd_scene load_steps=5 format=3 uid="uid://cuci3orvsdp1u"]
 
 [ext_resource type="Script" path="res://scripts/sprite/player/player.gd" id="1_srssk"]
 [ext_resource type="Texture2D" uid="uid://cc233w8mmdfto" path="res://asset/texture/sprite/player/Player.png" id="1_tnla0"]
+[ext_resource type="AudioStream" uid="uid://mx16lwo7u7j4" path="res://asset/sfx/jump/jump.wav" id="3_1b8ir"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mjcho"]
 size = Vector2(28, 28)
@@ -20,3 +21,6 @@ shape = SubResource("RectangleShape2D_mjcho")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.7, 2.7)
 position_smoothing_enabled = true
+
+[node name="Jump" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_1b8ir")
