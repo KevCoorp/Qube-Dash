@@ -16,6 +16,10 @@ run/main_scene="res://scene/game/tutorial/tutorial.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.png"
 
+[autoload]
+
+GameManager="*res://scripts/misc/gamemanager/GameManager.gd"
+
 [input]
 
 jump={
