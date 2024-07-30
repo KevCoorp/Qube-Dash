@@ -36,13 +36,12 @@ script = ExtResource("1_4c2u2")
 sprite_frames = SubResource("SpriteFrames_vm2q4")
 autoplay = "default"
 
-[node name="CoinsSFX" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_ofldl")
-
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-visible = false
 shape = SubResource("CircleShape2D_gcjyo")
+
+[node name="CoinsSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ofldl")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
