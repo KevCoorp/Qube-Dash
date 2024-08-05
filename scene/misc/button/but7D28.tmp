@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjvko10l5gcuw"]
+
+[ext_resource type="Script" path="res://scripts/misc/button/button.gd" id="1_73tlp"]
+[ext_resource type="Texture2D" uid="uid://jjdrmcmyqg6d" path="res://asset/texture/item/button/button_tile.png" id="1_683nv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ar0ak"]
+size = Vector2(14, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_31py8"]
+
+[node name="Button" type="CharacterBody2D"]
+script = ExtResource("1_73tlp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
+texture = ExtResource("1_683nv")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_ar0ak")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_31py8")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

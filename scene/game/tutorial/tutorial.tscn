@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://5xxjbbaop6jc"]
+[gd_scene load_steps=14 format=3 uid="uid://5xxjbbaop6jc"]
 
 [ext_resource type="Script" path="res://scripts/world/tutorial/tutorial.gd" id="1_fglse"]
 [ext_resource type="PackedScene" uid="uid://cuci3orvsdp1u" path="res://scene/sprite/player/player.tscn" id="2_amhw8"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b1cdup2d8hnt6" path="res://scene/sprite/enemy/red_enemy/red_enemy.tscn" id="7_76lp4"]
 [ext_resource type="PackedScene" uid="uid://dhlyc6lksst0f" path="res://scene/sprite/enemy/spikes/spikes.tscn" id="8_vgot1"]
 [ext_resource type="PackedScene" uid="uid://cjdamnk8vep0y" path="res://scene/game/switch/switch_level.tscn" id="9_6sojw"]
+[ext_resource type="PackedScene" uid="uid://cjvko10l5gcuw" path="res://scene/misc/button/button.tscn" id="10_a312h"]
 
 [sub_resource type="Theme" id="Theme_r7oqf"]
 
@@ -24,11 +25,11 @@ script = ExtResource("1_fglse")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -1608.0
-offset_right = 8197.0
-offset_bottom = 1200.0
+offset_top = -151.0
+offset_right = 6367.0
+offset_bottom = 1460.0
 theme = SubResource("Theme_r7oqf")
 color = Color(0, 0.556863, 1, 1)
-metadata/_edit_lock_ = true
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("2_dxxq4")
@@ -72,7 +73,7 @@ text = "Be careful !"
 position = Vector2(4948.72, 402)
 
 [node name="Player" parent="." instance=ExtResource("2_amhw8")]
-position = Vector2(4177.52, 402)
+position = Vector2(134.209, 434)
 
 [node name="Wall" type="StaticBody2D" parent="."]
 position = Vector2(80, 304)
@@ -121,6 +122,9 @@ shape = SubResource("RectangleShape2D_nvgu3")
 
 [node name="RedEnemy" parent="." instance=ExtResource("7_76lp4")]
 position = Vector2(1839.87, 432)
+
+[node name="RedEnemy2" parent="." instance=ExtResource("7_76lp4")]
+position = Vector2(2886.5, 432)
 
 [node name="Spikes" type="Node2D" parent="."]
 position = Vector2(3273.11, 474)
@@ -223,3 +227,6 @@ position = Vector2(1330.08, -126)
 
 [node name="Coin7" parent="Coins" instance=ExtResource("2_ltl70")]
 position = Vector2(1256.97, -172)
+
+[node name="Button" parent="." instance=ExtResource("10_a312h")]
+position = Vector2(395.617, 448)
