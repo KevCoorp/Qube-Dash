@@ -56,11 +56,11 @@ light_mask = 2
 script = ExtResource("1_srssk")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-visible = false
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("1_tnla0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_oqm04")
 animation = &"die"
 frame_progress = 0.470988

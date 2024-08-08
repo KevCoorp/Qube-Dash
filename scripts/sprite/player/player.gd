@@ -5,9 +5,12 @@ const SPEED = 150.0
 const JUMP_VELOCITY = -355
 
 @onready var audio = $Jump
-@onready var animation = $AnimatedSprite2D
+@onready var anim = $AnimatedSprite2D
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+
+func _ready():
+	anim.hide()
 
 func _physics_process(delta):
 	if not is_on_floor():
@@ -27,7 +30,10 @@ func _physics_process(delta):
 	move_and_slide()
 
 func die():
-	animation.play("die")
+	await get_tree().create_timer(5).timeout
+	anim.show("die")
+	anim.play("die")
+	print("2")
 	queue_free()
 
 	
