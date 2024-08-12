@@ -39,12 +39,12 @@ animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.453325
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.5, -2)
-shape = SubResource("RectangleShape2D_5qqc0")
-
 [node name="RayLeft" type="RayCast2D" parent="."]
 target_position = Vector2(-15, 0)
 
 [node name="RayRight" type="RayCast2D" parent="."]
 target_position = Vector2(19, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, -2)
+shape = SubResource("RectangleShape2D_5qqc0")
