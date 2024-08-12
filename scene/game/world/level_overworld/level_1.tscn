@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://p1q7s0474hi2"]
+[gd_scene load_steps=9 format=3 uid="uid://p1q7s0474hi2"]
 
 [ext_resource type="PackedScene" uid="uid://cuci3orvsdp1u" path="res://scene/sprite/player/player.tscn" id="1_r7i87"]
 [ext_resource type="PackedScene" uid="uid://ca326430be24p" path="res://scene/game/world/level_overworld/tile_map.tscn" id="2_o6fvm"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b1cdup2d8hnt6" path="res://scene/sprite/enemy/red_enemy/red_enemy.tscn" id="5_wy4hw"]
 [ext_resource type="PackedScene" uid="uid://dhlyc6lksst0f" path="res://scene/sprite/enemy/spikes/spikes.tscn" id="6_ydko7"]
 [ext_resource type="PackedScene" uid="uid://cjdamnk8vep0y" path="res://scene/game/switch/switch_level.tscn" id="7_vp7a4"]
+[ext_resource type="PackedScene" uid="uid://381y1hu1jy6i" path="res://scene/sprite/bird/flying_bird.tscn" id="8_7kubn"]
 
 [node name="Level1" type="Node2D"]
 
@@ -194,3 +195,21 @@ position = Vector2(2750, 64)
 
 [node name="SwitchLevel" parent="." instance=ExtResource("7_vp7a4")]
 position = Vector2(5191, 18)
+
+[node name="Flying_Bird" parent="." instance=ExtResource("8_7kubn")]
+position = Vector2(313, -75)
+
+[node name="Flying_Bird2" parent="." instance=ExtResource("8_7kubn")]
+position = Vector2(1019, -184)
+
+[node name="Flying_Bird3" parent="." instance=ExtResource("8_7kubn")]
+position = Vector2(1514, -116)
+
+[node name="Flying_Bird4" parent="." instance=ExtResource("8_7kubn")]
+position = Vector2(2285, -131)
+
+[node name="Flying_Bird5" parent="." instance=ExtResource("8_7kubn")]
+position = Vector2(2894, -118)
+
+[node name="Flying_Bird6" parent="." instance=ExtResource("8_7kubn")]
+position = Vector2(3735, -102)

@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://381y1hu1jy6i"]
+
+[ext_resource type="Script" path="res://scripts/sprite/bird/flying_bird.gd" id="1_4p2ae"]
+[ext_resource type="Texture2D" uid="uid://dy7xhi8vfaw0i" path="res://asset/texture/sprite/bird/bird_spritesheet.png" id="1_fcmxv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ro3t"]
+atlas = ExtResource("1_fcmxv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t4j71"]
+atlas = ExtResource("1_fcmxv")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lyqup"]
+animations = [{
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_3ro3t")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_t4j71")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 0.5
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5qqc0"]
+size = Vector2(27, 20)
+
+[node name="Flying_Bird" type="CharacterBody2D"]
+collision_layer = 0
+script = ExtResource("1_4p2ae")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_lyqup")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.453325
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, -2)
+shape = SubResource("RectangleShape2D_5qqc0")
+
+[node name="RayLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-15, 0)
+
+[node name="RayRight" type="RayCast2D" parent="."]
+target_position = Vector2(19, 0)
