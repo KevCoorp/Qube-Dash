@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dv4owqc15gbfh"]
+[gd_scene load_steps=7 format=3 uid="uid://dv4owqc15gbfh"]
 
 [ext_resource type="Script" path="res://scripts/cutscenes/cti_1.gd" id="1_lm7ri"]
 [ext_resource type="Theme" uid="uid://cyjj6uugb2p1g" path="res://theme/tutorial/CinematicText.tres" id="1_tufs4"]
 [ext_resource type="Texture2D" uid="uid://dchvvwataaw7i" path="res://game/cutscenes/graphics/intro/sc1.png" id="3_pntcx"]
 [ext_resource type="Texture2D" uid="uid://b21dpxa26dfmo" path="res://game/cutscenes/graphics/intro/sc2.png" id="4_myql4"]
 [ext_resource type="Texture2D" uid="uid://dmcjoxhho3xrt" path="res://game/cutscenes/graphics/intro/sc3.png" id="5_6dsjm"]
+[ext_resource type="Texture2D" uid="uid://bu3yp2uxncj5h" path="res://game/cutscenes/graphics/intro/sc4.png" id="6_dd23o"]
 
 [node name="CTI_1" type="Node2D"]
 script = ExtResource("1_lm7ri")
@@ -15,7 +16,6 @@ offset_bottom = 648.0
 color = Color(0, 0, 0, 1)
 
 [node name="SC1" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -72,6 +72,7 @@ position = Vector2(576, 336)
 texture = ExtResource("4_myql4")
 
 [node name="SC3" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -110,6 +111,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Sc4" type="Sprite2D" parent="SC4"]
+position = Vector2(576, 336)
+texture = ExtResource("6_dd23o")
 
 [node name="Label" type="Label" parent="SC4"]
 layout_mode = 1
