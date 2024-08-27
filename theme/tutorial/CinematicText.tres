@@ -1,0 +1,12 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cyjj6uugb2p1g"]
+
+[ext_resource type="FontFile" uid="uid://cy02mhsv2d4bl" path="res://font/normal/PressStart2P-Regular.ttf" id="1_ki82d"]
+
+[resource]
+default_font = ExtResource("1_ki82d")
+default_font_size = 8
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/constants/shadow_offset_x = 0
+Label/constants/shadow_offset_y = 0
+Label/constants/shadow_outline_size = 0
+Label/font_sizes/font_size = 8

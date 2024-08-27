@@ -1,8 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://dv4owqc15gbfh"]
+[gd_scene load_steps=5 format=3 uid="uid://dv4owqc15gbfh"]
 
-[ext_resource type="Theme" uid="uid://b5wdv7bibdjkt" path="res://theme/tutorial/TutorialText.tres" id="1_mxxph"]
+[ext_resource type="Script" path="res://scripts/cutscenes/cti_1.gd" id="1_lm7ri"]
+[ext_resource type="Theme" uid="uid://cyjj6uugb2p1g" path="res://theme/tutorial/CinematicText.tres" id="1_tufs4"]
+[ext_resource type="Texture2D" uid="uid://dchvvwataaw7i" path="res://game/cutscenes/graphics/intro/sc1.png" id="3_pntcx"]
+[ext_resource type="Texture2D" uid="uid://b21dpxa26dfmo" path="res://game/cutscenes/graphics/intro/sc2.png" id="4_myql4"]
 
-[node name="CTI_1" type="Control"]
+[node name="CTI_1" type="Node2D"]
+script = ExtResource("1_lm7ri")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="SC1" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,30 +21,115 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="SC1" type="Control" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ColorRect" type="ColorRect" parent="SC1"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-metadata/_edit_lock_ = true
-
 [node name="Label" type="Label" parent="SC1"]
 layout_mode = 0
-offset_left = 254.0
-offset_top = 502.0
-offset_right = 325.0
-offset_bottom = 510.0
-scale = Vector2(11.2, 11.2)
-theme = ExtResource("1_mxxph")
-text = "Welcome"
+offset_left = 240.0
+offset_top = 520.0
+offset_right = 464.0
+offset_bottom = 539.0
+scale = Vector2(3, 3)
+theme = ExtResource("1_tufs4")
+text = "In a quiet world,
+ where Qube lived in harmony"
+horizontal_alignment = 1
+
+[node name="Sc1" type="Sprite2D" parent="SC1"]
+position = Vector2(576, 336)
+texture = ExtResource("3_pntcx")
+
+[node name="SC2" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="SC2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 152.0
+offset_top = 520.0
+offset_right = 432.0
+offset_bottom = 539.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+theme = ExtResource("1_tufs4")
+text = "Xecube the terrible,
+ greedy of power invade the kingdom"
+horizontal_alignment = 1
+
+[node name="Sc2" type="Sprite2D" parent="SC2"]
+position = Vector2(576, 336)
+texture = ExtResource("4_myql4")
+
+[node name="SC3" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="SC3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 200.0
+offset_top = 520.0
+offset_right = 448.0
+offset_bottom = 539.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+theme = ExtResource("1_tufs4")
+text = "He create a giant army 
+and conquest all the lands"
+horizontal_alignment = 1
+
+[node name="SC4" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="SC4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 128.0
+offset_top = 520.0
+offset_right = 424.0
+offset_bottom = 539.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+theme = ExtResource("1_tufs4")
+text = "Can you reach to stop his misdemeanor 
+and save the world ?"
+horizontal_alignment = 1
+
+[node name="SkipLabel" type="Label" parent="."]
+offset_left = 280.0
+offset_top = 112.0
+offset_right = 512.0
+offset_bottom = 120.0
+scale = Vector2(2.5, 2.5)
+theme = ExtResource("1_tufs4")
+text = "Press the [K] button to skip "
