@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://5xxjbbaop6jc"]
+[gd_scene load_steps=13 format=3 uid="uid://5xxjbbaop6jc"]
 
 [ext_resource type="Script" path="res://scripts/world/tutorial/tutorial.gd" id="1_fglse"]
 [ext_resource type="PackedScene" uid="uid://cuci3orvsdp1u" path="res://scene/sprite/player/player.tscn" id="2_amhw8"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://b1cdup2d8hnt6" path="res://scene/sprite/enemy/red_enemy/red_enemy.tscn" id="7_76lp4"]
 [ext_resource type="PackedScene" uid="uid://dhlyc6lksst0f" path="res://scene/sprite/enemy/spikes/spikes.tscn" id="8_vgot1"]
 [ext_resource type="PackedScene" uid="uid://cjdamnk8vep0y" path="res://scene/game/switch/switch_level.tscn" id="9_6sojw"]
-[ext_resource type="PackedScene" uid="uid://cjvko10l5gcuw" path="res://scene/misc/button/button.tscn" id="10_a312h"]
 
 [sub_resource type="Theme" id="Theme_r7oqf"]
 
@@ -227,6 +226,3 @@ position = Vector2(1330.08, -126)
 
 [node name="Coin7" parent="Coins" instance=ExtResource("2_ltl70")]
 position = Vector2(1256.97, -172)
-
-[node name="Button" parent="." instance=ExtResource("10_a312h")]
-position = Vector2(395.617, 448)

@@ -69,7 +69,7 @@ frame_progress = 0.470988
 shape = SubResource("RectangleShape2D_mjcho")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2.7, 2.7)
+zoom = Vector2(2.3, 2.3)
 position_smoothing_enabled = true
 
 [node name="Jump" type="AudioStreamPlayer2D" parent="."]
