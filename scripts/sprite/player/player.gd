@@ -6,11 +6,13 @@ const JUMP_VELOCITY = -355
 
 @onready var audio = $Jump
 @onready var anim = $AnimatedSprite2D
+@onready var player_sprite = $PlayerSprite
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
 	anim.hide()
+	player_sprite.show()
 
 func _physics_process(delta):
 	if not is_on_floor():
@@ -30,10 +32,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 func die():
-	await get_tree().create_timer(5).timeout
-	anim.show("die")
+	player_sprite.hide()
+	anim.show()
 	anim.play("die")
-	print("2")
-	queue_free()
 
-	
