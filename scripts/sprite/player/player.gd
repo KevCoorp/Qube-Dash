@@ -34,5 +34,9 @@ func _physics_process(delta):
 func die():
 	player_sprite.hide()
 	anim.show()
-	anim.play("die")
+	$AnimatedSprite2D.play("die")
+	await $AnimatedSprite2D.animation_finished
+	get_tree().reload_current_scene()
+	
+	
 
