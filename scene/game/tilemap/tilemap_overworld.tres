@@ -1,7 +1,8 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://tupowi1yrouv"]
+[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://tupowi1yrouv"]
 
 [ext_resource type="Texture2D" uid="uid://2ut7x6vpvndh" path="res://asset/texture/tileset/Tilesheet.png" id="1_08rj5"]
 [ext_resource type="Texture2D" uid="uid://d1wr2l21i7nfh" path="res://asset/texture/tileset/animated_water.png" id="2_vqofv"]
+[ext_resource type="Texture2D" uid="uid://bhg8qt7e31smt" path="res://asset/texture/world/level_overworld/hill.png" id="3_v8dnd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ynfks"]
 texture = ExtResource("1_08rj5")
@@ -121,8 +122,31 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hdums"]
+texture = ExtResource("3_v8dnd")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0 = 0
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+5:0/0 = 0
+5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:0/0/physics_layer_0/angular_velocity = 0.0
+
 [resource]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ynfks")
 sources/1 = SubResource("TileSetAtlasSource_a7tim")
+sources/2 = SubResource("TileSetAtlasSource_hdums")
