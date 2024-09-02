@@ -1,7 +1,8 @@
 extends Node2D
 
-var bg = Color8(0, 142, 255) 
+# Variable
+var bg = Color8(0, 142, 255) # Couleur du background
 
 func _ready():
-	RenderingServer.set_default_clear_color(bg)
+	RenderingServer.set_default_clear_color(bg) # Appliquer la couleur du background
 

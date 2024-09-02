@@ -1,19 +1,23 @@
 extends CharacterBody2D
 class_name Player 
 
-const SPEED = 150.0
-const JUMP_VELOCITY = -355
+# Constantes
+const SPEED = 150.0 # Vitesse
+const JUMP_VELOCITY = -355 # Velocité du saut
 
+# Export des variables
 @onready var audio = $Jump
 @onready var anim = $AnimatedSprite2D
 @onready var player_sprite = $PlayerSprite
 
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+# Variable
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") 
 
 func _ready():
-	anim.hide()
-	player_sprite.show()
+	anim.hide() # Cacher l'animation ("die")
+	player_sprite.show() # Afficher le joueur
 
+# Fonction liée au déplacement/méchanique
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -23,6 +27,7 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 		audio.play()
 
+	# Déplacement du joueur 
 	var direction = Input.get_axis("left","right")
 	if direction:
 		velocity.x = direction * SPEED
@@ -32,11 +37,11 @@ func _physics_process(delta):
 	move_and_slide()
 
 func die():
-	player_sprite.hide()
-	anim.show()
-	$AnimatedSprite2D.play("die")
-	await $AnimatedSprite2D.animation_finished
-	get_tree().reload_current_scene()
+	player_sprite.hide() # Cacher le sprite
+	anim.show() # Afficher l'animation
+	$AnimatedSprite2D.play("die") # Jouer l'animation
+	await $AnimatedSprite2D.animation_finished # Attendre que l'animation sois finit
+	get_tree().reload_current_scene() # Recommencer la scène
 	
 	
 

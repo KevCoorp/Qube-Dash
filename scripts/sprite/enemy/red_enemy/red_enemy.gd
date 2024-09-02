@@ -1,12 +1,13 @@
 extends CharacterBody2D
 
-const SPEED = 60
+const SPEED = 60 # Vitesse
 
 @onready var ray_left = $RayLeft
 @onready var ray_right = $RayRight
 
 var direction = 1
 
+# Déplacement de l'ennemie 
 func _process(delta):
 	if not ray_right.is_colliding():
 		direction = -1
@@ -16,5 +17,5 @@ func _process(delta):
 	position.x += direction * SPEED * delta
 
 func _on_area_2d_body_entered(body):
-	if body is Player:
-		body.die()
+	if body is Player: # Si le joueur => entre en contacte avec l'ennemie
+		body.die() # Appel de la fonction "die" => "player.gd"
