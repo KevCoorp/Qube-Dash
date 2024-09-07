@@ -1,4 +1,8 @@
-[gd_scene format=3 uid="uid://dnchj7fm0xocc"]
+[gd_scene load_steps=4 format=3 uid="uid://dnchj7fm0xocc"]
+
+[ext_resource type="Script" path="res://scripts/menu/main_menu.gd" id="1_jfth8"]
+[ext_resource type="Texture2D" uid="uid://bt3f2k1fpfaqb" path="res://asset/texture/bg/background1.png" id="1_s5scw"]
+[ext_resource type="Texture2D" uid="uid://by3j28p46bxu5" path="res://asset/texture/ui/misc/logo/logo_beta.png" id="2_0y7rp"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -7,3 +11,50 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_jfth8")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_s5scw")
+
+[node name="LogoBeta" type="Sprite2D" parent="."]
+position = Vector2(265, 350)
+texture = ExtResource("2_0y7rp")
+
+[node name="BuildTag" type="Label" parent="."]
+layout_mode = 0
+offset_left = 950.0
+offset_top = 19.0
+offset_right = 1130.0
+offset_bottom = 42.0
+text = " Build 0.14.qd_dev.2024"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+size_flags_horizontal = 4
+
+[node name="NewGame" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "New game"
+flat = true
+alignment = 0
+
+[node name="LoadGame" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Load game"
+flat = true
+alignment = 0
+
+[node name="Settings" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+flat = true
+alignment = 0
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Exit"
+flat = true
+alignment = 0
