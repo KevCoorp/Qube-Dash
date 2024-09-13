@@ -1,9 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnchj7fm0xocc"]
+[gd_scene load_steps=10 format=3 uid="uid://dnchj7fm0xocc"]
 
 [ext_resource type="Script" path="res://scripts/menu/main_menu.gd" id="1_jfth8"]
 [ext_resource type="Texture2D" uid="uid://bt3f2k1fpfaqb" path="res://asset/texture/bg/background1.png" id="1_s5scw"]
 [ext_resource type="Texture2D" uid="uid://by3j28p46bxu5" path="res://asset/texture/ui/misc/logo/logo_beta.png" id="2_0y7rp"]
+[ext_resource type="Theme" uid="uid://brei3ep73waux" path="res://theme/menu/main_menu.tres" id="4_1igts"]
 [ext_resource type="AudioStream" uid="uid://b3vd0nhlavpvf" path="res://asset/bgm/main_menu/main_menu.mp3" id="4_8o5by"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6rp2k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nwoa5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kugay"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tk6kc"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -27,7 +36,7 @@ grow_vertical = 2
 texture = ExtResource("1_s5scw")
 
 [node name="LogoBeta" type="Sprite2D" parent="."]
-position = Vector2(265, 350)
+position = Vector2(265, 308)
 texture = ExtResource("2_0y7rp")
 
 [node name="BuildTag" type="Label" parent="."]
@@ -42,33 +51,42 @@ text = " Build 0.16.qd_dev.2024"
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_left = 113.0
-offset_top = 431.0
-offset_right = 206.0
+offset_left = 49.0
+offset_top = 359.0
+offset_right = 212.0
+offset_bottom = -72.0
 grow_vertical = 2
 size_flags_horizontal = 4
 
 [node name="NewGame" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+theme = ExtResource("4_1igts")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6rp2k")
 text = "New game"
 flat = true
 alignment = 0
 
 [node name="LoadGame" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("4_1igts")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nwoa5")
 text = "Load game"
 flat = true
 alignment = 0
 
 [node name="Settings" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("4_1igts")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kugay")
 text = "Settings"
 flat = true
 alignment = 0
 
 [node name="Exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("4_1igts")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tk6kc")
 text = "Exit"
 flat = true
 alignment = 0

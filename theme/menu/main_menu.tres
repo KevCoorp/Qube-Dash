@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://brei3ep73waux"]
+
+[ext_resource type="FontFile" uid="uid://bo4yyxyvmbc7j" path="res://font/normal/PixelifySans-VariableFont_wght.ttf" id="1_vap2w"]
+
+[resource]
+default_font = ExtResource("1_vap2w")
+Button/colors/font_outline_color = Color(1, 1, 1, 0)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 30
+Button/fonts/font = ExtResource("1_vap2w")
