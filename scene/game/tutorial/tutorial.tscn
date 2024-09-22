@@ -126,7 +126,7 @@ shape = SubResource("RectangleShape2D_nvgu3")
 position = Vector2(1839.87, 432)
 
 [node name="RedEnemy2" parent="." instance=ExtResource("7_76lp4")]
-position = Vector2(2886.5, 432)
+position = Vector2(3075.8, 432)
 
 [node name="Spikes" type="Node2D" parent="."]
 position = Vector2(3273.11, 474)
@@ -206,6 +206,15 @@ position = Vector2(1136.77, -30)
 [node name="Spikes27" parent="Spikes" instance=ExtResource("8_vgot1")]
 position = Vector2(1122.75, -30)
 
+[node name="Spikes28" parent="Spikes" instance=ExtResource("8_vgot1")]
+position = Vector2(-449.706, -30)
+
+[node name="Spikes29" parent="Spikes" instance=ExtResource("8_vgot1")]
+position = Vector2(-435.684, -30)
+
+[node name="Spikes30" parent="Spikes" instance=ExtResource("8_vgot1")]
+position = Vector2(-422.664, -30)
+
 [node name="Coins" type="Node2D" parent="."]
 position = Vector2(3111.85, 430)
 
@@ -236,6 +245,4 @@ position = Vector2(1256.97, -172)
 [node name="Sign" parent="." instance=ExtResource("10_knbpo")]
 position = Vector2(527.823, 434)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="DeathTimer" parent="CanvasLayer" instance=ExtResource("6_pivyj")]
+[node name="DeathTimer" parent="." instance=ExtResource("6_pivyj")]
