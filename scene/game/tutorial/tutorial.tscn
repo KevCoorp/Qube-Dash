@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://5xxjbbaop6jc"]
+[gd_scene load_steps=14 format=3 uid="uid://5xxjbbaop6jc"]
 
 [ext_resource type="Script" path="res://scripts/world/tutorial/tutorial.gd" id="1_fglse"]
 [ext_resource type="PackedScene" uid="uid://cuci3orvsdp1u" path="res://scene/sprite/player/player.tscn" id="2_amhw8"]
@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://dhlyc6lksst0f" path="res://scene/sprite/enemy/spikes/spikes.tscn" id="8_vgot1"]
 [ext_resource type="PackedScene" uid="uid://cjdamnk8vep0y" path="res://scene/game/switch/switch_level.tscn" id="9_6sojw"]
 [ext_resource type="PackedScene" uid="uid://boqejlwxopdfl" path="res://scene/misc/sign/sign.tscn" id="10_knbpo"]
-[ext_resource type="AudioStream" uid="uid://dr6e48ov77is7" path="res://asset/bgm/overworld/overworld.mp3" id="11_p6l4l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1xc1v"]
 size = Vector2(272.424, 210.5)
@@ -237,9 +236,6 @@ position = Vector2(1256.97, -172)
 [node name="Sign" parent="." instance=ExtResource("10_knbpo")]
 position = Vector2(527.823, 434)
 
-[node name="bgm" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("11_p6l4l")
-autoplay = true
-attenuation = 0.0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="DeathTimer" parent="." instance=ExtResource("6_pivyj")]
+[node name="DeathTimer" parent="CanvasLayer" instance=ExtResource("6_pivyj")]
