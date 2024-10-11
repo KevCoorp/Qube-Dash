@@ -18,6 +18,7 @@ offset_top = -1095.0
 offset_right = 6394.0
 offset_bottom = 1232.0
 color = Color(0, 0.556863, 1, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="TileMap" parent="." instance=ExtResource("2_o6fvm")]
 position = Vector2(-2, 0)
