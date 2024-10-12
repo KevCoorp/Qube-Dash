@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://droublrj745d8"]
+[gd_scene load_steps=4 format=3 uid="uid://droublrj745d8"]
 
 [ext_resource type="PackedScene" uid="uid://cuci3orvsdp1u" path="res://scene/sprite/player/player.tscn" id="2_3f7a8"]
 [ext_resource type="TileSet" uid="uid://tupowi1yrouv" path="res://scene/game/tilemap/tilemap_overworld.tres" id="2_rl6fc"]
+[ext_resource type="PackedScene" uid="uid://b5ekbwv7xamgy" path="res://scene/sprite/enemy/floating_enemy/floatingEnemy.tscn" id="3_6g6wo"]
 
 [node name="level_2" type="Node2D"]
 
@@ -29,3 +30,6 @@ layer_6/name = "rocks"
 layer_6/y_sort_origin = 4
 layer_6/z_index = 8
 layer_6/tile_data = PackedInt32Array()
+
+[node name="FloatingEnemy" parent="." instance=ExtResource("3_6g6wo")]
+position = Vector2(79, -52)

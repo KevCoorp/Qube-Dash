@@ -17,6 +17,10 @@ config/features=PackedStringArray("4.2", "Mobile")
 boot_splash/image="res://asset/texture/splash/betsplash.png"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://global.gd"
+
 [display]
 
 window/stretch/mode="viewport"

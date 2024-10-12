@@ -16,6 +16,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _ready():
 	anim.hide() # Cacher l'animation ("die")
 	player_sprite.show() # Afficher le joueur
+	Global.playerBody = self
 
 # Fonction liée au déplacement/méchanique
 func _physics_process(delta):
