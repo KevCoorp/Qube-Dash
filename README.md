@@ -1,11 +1,12 @@
 # Qube Dash
-## Présentation 
-🎮 - Qube Dash is a plateformer video game about cubes
+## Synopsis
+🎮 - Qube Dash is a free platformer indie game in development
 
 ## Systems requierements
 😕 - Not available 
+
 ## Assets used 
-<p>🎵 - N/A</p>
+🎵 - N/A
 ✍️ - Fonts: https://fonts.google.com/specimen/Press+Start+2P
 
 ## Software used for making the game
