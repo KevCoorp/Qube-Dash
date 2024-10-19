@@ -12,7 +12,7 @@ func _ready():
 	
 func _process(delta):
 	move(delta)
-	
+
 func move(delta):
 	if is_enemy_chase:
 		player = Global.playerBody
@@ -38,3 +38,4 @@ func handle_animation():
 func choose(array):
 	array.shuffle()
 	return array.front()
+

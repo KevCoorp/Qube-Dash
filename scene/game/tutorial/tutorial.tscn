@@ -71,11 +71,19 @@ offset_bottom = 399.0
 theme = ExtResource("3_75htj")
 text = "Be careful !"
 
+[node name="Label4" type="Label" parent="."]
+offset_left = 4865.59
+offset_top = 344.0
+offset_right = 5097.59
+offset_bottom = 352.0
+theme = ExtResource("3_75htj")
+text = "Press [E] to capture the flag!"
+
 [node name="SwitchLevel" parent="." instance=ExtResource("9_6sojw")]
 position = Vector2(4948.72, 402)
 
 [node name="Player" parent="." instance=ExtResource("2_amhw8")]
-position = Vector2(-21.0328, 434)
+position = Vector2(4808.5, 388)
 
 [node name="Wall" type="StaticBody2D" parent="."]
 position = Vector2(80, 304)
