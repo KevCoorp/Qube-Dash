@@ -40,7 +40,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ibykc"]
-size = Vector2(30, 20)
+size = Vector2(15.5, 13)
 
 [node name="FloatingEnemy" type="CharacterBody2D"]
 script = ExtResource("1_i6uys")
@@ -53,6 +53,7 @@ autoplay = "floating"
 frame_progress = 0.235869
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.25, 3.5)
 shape = SubResource("RectangleShape2D_ibykc")
 
 [node name="Timer" type="Timer" parent="."]

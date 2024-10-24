@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://5xxjbbaop6jc"]
+[gd_scene load_steps=13 format=3 uid="uid://5xxjbbaop6jc"]
 
 [ext_resource type="Script" path="res://scripts/world/tutorial/tutorial.gd" id="1_fglse"]
 [ext_resource type="PackedScene" uid="uid://cuci3orvsdp1u" path="res://scene/sprite/player/player.tscn" id="2_amhw8"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://duyyabjkkmu2y" path="res://scene/sprite/item/coin/coin.tscn" id="2_ltl70"]
 [ext_resource type="Theme" uid="uid://b5wdv7bibdjkt" path="res://theme/tutorial/TutorialText.tres" id="3_75htj"]
 [ext_resource type="PackedScene" uid="uid://nf78dqab3iqa" path="res://scene/misc/fallzone/fallzone.tscn" id="6_nbef1"]
-[ext_resource type="PackedScene" uid="uid://3i3egmg0tryg" path="res://scene/misc/deathtimer/death_timer.tscn" id="6_pivyj"]
 [ext_resource type="PackedScene" uid="uid://b1cdup2d8hnt6" path="res://scene/sprite/enemy/red_enemy/red_enemy.tscn" id="7_76lp4"]
 [ext_resource type="PackedScene" uid="uid://dhlyc6lksst0f" path="res://scene/sprite/enemy/spikes/spikes.tscn" id="8_vgot1"]
 [ext_resource type="PackedScene" uid="uid://cjdamnk8vep0y" path="res://scene/game/switch/switch_level.tscn" id="9_6sojw"]
@@ -83,7 +82,7 @@ text = "Press [E] to capture the flag!"
 position = Vector2(4948.72, 402)
 
 [node name="Player" parent="." instance=ExtResource("2_amhw8")]
-position = Vector2(4808.5, 388)
+position = Vector2(117.183, 434)
 
 [node name="Wall" type="StaticBody2D" parent="."]
 position = Vector2(80, 304)
@@ -253,4 +252,15 @@ position = Vector2(1256.97, -172)
 [node name="Sign" parent="." instance=ExtResource("10_knbpo")]
 position = Vector2(527.823, 434)
 
-[node name="DeathTimer" parent="." instance=ExtResource("6_pivyj")]
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="HUD"]
+offset_left = 60.0
+offset_top = 39.0
+offset_right = 204.0
+offset_bottom = 55.0
+theme = ExtResource("3_75htj")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "Tutorial "
+metadata/_edit_use_anchors_ = true
