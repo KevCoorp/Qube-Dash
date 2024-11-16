@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://p1q7s0474hi2"]
+[gd_scene load_steps=14 format=3 uid="uid://p1q7s0474hi2"]
 
+[ext_resource type="PackedScene" uid="uid://63mbr0wkja1" path="res://game/pause_menu/pause_menu.tscn" id="1_aes7m"]
 [ext_resource type="PackedScene" uid="uid://cuci3orvsdp1u" path="res://scene/sprite/player/player.tscn" id="1_r7i87"]
 [ext_resource type="PackedScene" uid="uid://ca326430be24p" path="res://scene/game/world/level_overworld/tile_map.tscn" id="2_o6fvm"]
 [ext_resource type="TileSet" uid="uid://tupowi1yrouv" path="res://scene/game/tilemap/tilemap_overworld.tres" id="3_q7iv1"]
@@ -16,6 +17,9 @@
 size = Vector2(74, 68)
 
 [node name="Level1" type="Node2D"]
+
+[node name="PauseMenu" parent="." instance=ExtResource("1_aes7m")]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visibility_layer = 16

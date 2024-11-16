@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://5xxjbbaop6jc"]
+[gd_scene load_steps=14 format=3 uid="uid://5xxjbbaop6jc"]
 
 [ext_resource type="Script" path="res://scripts/world/tutorial/tutorial.gd" id="1_fglse"]
 [ext_resource type="PackedScene" uid="uid://cuci3orvsdp1u" path="res://scene/sprite/player/player.tscn" id="2_amhw8"]
 [ext_resource type="TileSet" uid="uid://tupowi1yrouv" path="res://scene/game/tilemap/tilemap_overworld.tres" id="2_dxxq4"]
+[ext_resource type="PackedScene" uid="uid://63mbr0wkja1" path="res://game/pause_menu/pause_menu.tscn" id="2_l13uw"]
 [ext_resource type="PackedScene" uid="uid://duyyabjkkmu2y" path="res://scene/sprite/item/coin/coin.tscn" id="2_ltl70"]
 [ext_resource type="Theme" uid="uid://b5wdv7bibdjkt" path="res://theme/tutorial/TutorialText.tres" id="3_75htj"]
 [ext_resource type="PackedScene" uid="uid://nf78dqab3iqa" path="res://scene/misc/fallzone/fallzone.tscn" id="6_nbef1"]
@@ -20,6 +21,22 @@ size = Vector2(38.5475, 8.89122)
 [node name="Tutorial" type="Node2D"]
 scale = Vector2(0.99844, 1)
 script = ExtResource("1_fglse")
+
+[node name="PauseMenu" parent="." instance=ExtResource("2_l13uw")]
+visible = false
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="HUD"]
+offset_left = 60.0
+offset_top = 39.0
+offset_right = 204.0
+offset_bottom = 55.0
+theme = ExtResource("3_75htj")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "Tutorial "
+metadata/_edit_use_anchors_ = true
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("2_dxxq4")
@@ -251,16 +268,3 @@ position = Vector2(1256.97, -172)
 
 [node name="Sign" parent="." instance=ExtResource("10_knbpo")]
 position = Vector2(527.823, 434)
-
-[node name="HUD" type="CanvasLayer" parent="."]
-
-[node name="Label" type="Label" parent="HUD"]
-offset_left = 60.0
-offset_top = 39.0
-offset_right = 204.0
-offset_bottom = 55.0
-theme = ExtResource("3_75htj")
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 16
-text = "Tutorial "
-metadata/_edit_use_anchors_ = true
