@@ -23,10 +23,10 @@ visible = false
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visibility_layer = 16
-offset_left = -923.0
-offset_top = -1095.0
-offset_right = 6394.0
-offset_bottom = 1232.0
+offset_left = -1589.0
+offset_top = -1457.0
+offset_right = 8858.0
+offset_bottom = 1432.0
 color = Color(0, 0.556863, 1, 1)
 metadata/_edit_use_anchors_ = true
 

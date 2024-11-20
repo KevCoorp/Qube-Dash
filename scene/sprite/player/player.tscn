@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://cuci3orvsdp1u"]
+[gd_scene load_steps=15 format=3 uid="uid://cuci3orvsdp1u"]
 
 [ext_resource type="Script" path="res://scripts/sprite/player/player.gd" id="1_srssk"]
 [ext_resource type="Texture2D" uid="uid://cc233w8mmdfto" path="res://asset/texture/sprite/player/Player.png" id="1_tnla0"]
 [ext_resource type="AudioStream" uid="uid://mx16lwo7u7j4" path="res://asset/sfx/jump/jump.wav" id="3_1b8ir"]
 [ext_resource type="Texture2D" uid="uid://2jydgj1vqmar" path="res://asset/texture/sprite/player/animation_die/player_death_tileset.png" id="3_rxogl"]
+[ext_resource type="FontFile" uid="uid://cy02mhsv2d4bl" path="res://font/normal/PressStart2P-Regular.ttf" id="5_4kpiy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b4ts7"]
 atlas = ExtResource("3_rxogl")
@@ -51,6 +52,12 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mjcho"]
 size = Vector2(28, 28)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gl314"]
+size = Vector2(28, 28)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xm8bd"]
+font = ExtResource("5_4kpiy")
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 light_mask = 2
 script = ExtResource("1_srssk")
@@ -75,3 +82,21 @@ position_smoothing_enabled = true
 
 [node name="Jump" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_1b8ir")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_gl314")
+
+[node name="CoiinsHUD" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CoiinsHUD"]
+offset_left = 63.0
+offset_top = 64.0
+offset_right = 143.0
+offset_bottom = 72.0
+text = "Coins:"
+label_settings = SubResource("LabelSettings_xm8bd")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

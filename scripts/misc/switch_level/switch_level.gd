@@ -3,7 +3,8 @@ extends Node2D
 @onready var anim = $AnimatedSprite2D
 
 func _ready():
-	anim.play("idle")
+	#anim.play("idle")
+	pass
 	
 func _physics_process(delta):
 	if Input.is_action_just_pressed("interact"):

@@ -26,22 +26,19 @@ animations = [{
 "speed": 3.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_gcjyo"]
-radius = 9.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_p40hg"]
 
-[node name="Coin" type="Node2D"]
+[node name="Coin" type="Area2D" groups=["coin"]]
 script = ExtResource("1_4c2u2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_vm2q4")
 autoplay = "default"
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_gcjyo")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_p40hg")
 
 [node name="CoinsSFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_ofldl")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

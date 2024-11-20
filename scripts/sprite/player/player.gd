@@ -9,9 +9,11 @@ const JUMP_VELOCITY = -355 # Velocité du saut
 @onready var audio = $Jump
 @onready var anim = $AnimatedSprite2D
 @onready var player_sprite = $PlayerSprite
+@onready var coin_label = $CoiinsHUD/Label
 
 # Variable
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") 
+var coin_counter = 0
 
 func _ready():
 	anim.hide() # Cacher l'animation ("die")
@@ -44,5 +46,17 @@ func die():
 	await $AnimatedSprite2D.animation_finished # Attendre que l'animation sois finit
 	get_tree().reload_current_scene() # Recommencer la scène
 	
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("coin"):
+		set_coin(coin_counter + 1)
+		print(coin_counter)
+
+func set_coin(new_coin_count: int) -> void: 	
+	coin_counter = new_coin_count
+	coin_label.text = "Coins: " + str(coin_counter)
 	
+	
+	
+
+
 
