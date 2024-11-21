@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://p1q7s0474hi2"]
+[gd_scene load_steps=15 format=3 uid="uid://p1q7s0474hi2"]
 
 [ext_resource type="PackedScene" uid="uid://63mbr0wkja1" path="res://game/pause_menu/pause_menu.tscn" id="1_aes7m"]
 [ext_resource type="PackedScene" uid="uid://cuci3orvsdp1u" path="res://scene/sprite/player/player.tscn" id="1_r7i87"]
@@ -7,11 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://duyyabjkkmu2y" path="res://scene/sprite/item/coin/coin.tscn" id="4_366sv"]
 [ext_resource type="PackedScene" uid="uid://b1cdup2d8hnt6" path="res://scene/sprite/enemy/red_enemy/red_enemy.tscn" id="5_wy4hw"]
 [ext_resource type="PackedScene" uid="uid://dhlyc6lksst0f" path="res://scene/sprite/enemy/spikes/spikes.tscn" id="6_ydko7"]
-[ext_resource type="PackedScene" uid="uid://cjdamnk8vep0y" path="res://scene/game/switch/switch_level.tscn" id="7_vp7a4"]
 [ext_resource type="PackedScene" uid="uid://381y1hu1jy6i" path="res://scene/sprite/bird/flying_bird.tscn" id="8_7kubn"]
 [ext_resource type="PackedScene" uid="uid://3i3egmg0tryg" path="res://scene/misc/deathtimer/death_timer.tscn" id="9_yfxjw"]
 [ext_resource type="Theme" uid="uid://b5wdv7bibdjkt" path="res://theme/tutorial/TutorialText.tres" id="10_ynblj"]
 [ext_resource type="PackedScene" uid="uid://nf78dqab3iqa" path="res://scene/misc/fallzone/fallzone.tscn" id="11_jh3dn"]
+[ext_resource type="PackedScene" uid="uid://cjdamnk8vep0y" path="res://scene/game/switch/demo_end/demo_end.tscn" id="13_nmour"]
+[ext_resource type="AudioStream" uid="uid://dr6e48ov77is7" path="res://asset/bgm/overworld/overworld.mp3" id="13_y4mh7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e3ra1"]
 size = Vector2(74, 68)
@@ -23,6 +24,7 @@ visible = false
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visibility_layer = 16
+z_index = -6
 offset_left = -1589.0
 offset_top = -1457.0
 offset_right = 8858.0
@@ -52,6 +54,8 @@ layer_6/name = "Building"
 layer_6/y_sort_enabled = true
 layer_6/tile_data = PackedInt32Array()
 layer_7/name = "Hill"
+layer_7/y_sort_origin = -5
+layer_7/z_index = -1
 layer_7/tile_data = PackedInt32Array(90, 2, 0, 91, 65538, 0, 92, 131074, 0, 93, 196610, 0, 94, 262146, 0, 95, 327682, 0, 41, 2, 0, 42, 65538, 0, 50, 196610, 0, 51, 327682, 0, 43, 131074, 0, 44, 196610, 0, 45, 131074, 0, 46, 196610, 0, 47, 131074, 0, 48, 196610, 0, 49, 131074, 0, 65533, 131074, 0, 65534, 196610, 0, 65535, 131074, 0, 0, 196610, 0, 1, 131074, 0, 2, 196610, 0, 3, 131074, 0, 4, 196610, 0, 5, 131074, 0, 6, 196610, 0, 7, 131074, 0, 8, 196610, 0, 9, 131074, 0, 10, 196610, 0, 11, 262146, 0, 12, 327682, 0)
 
 [node name="Player" parent="." instance=ExtResource("1_r7i87")]
@@ -278,5 +282,9 @@ shape = SubResource("RectangleShape2D_e3ra1")
 position = Vector2(5009, 203)
 shape = SubResource("RectangleShape2D_e3ra1")
 
-[node name="SwitchLevel" parent="." instance=ExtResource("7_vp7a4")]
-position = Vector2(5153, 18)
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_y4mh7")
+autoplay = true
+
+[node name="SwitchLevel2" parent="." instance=ExtResource("13_nmour")]
+position = Vector2(5159, 18)

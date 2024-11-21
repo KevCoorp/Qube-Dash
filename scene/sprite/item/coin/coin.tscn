@@ -40,5 +40,6 @@ shape = SubResource("CircleShape2D_p40hg")
 
 [node name="CoinsSFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_ofldl")
+attenuation = 0.0
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

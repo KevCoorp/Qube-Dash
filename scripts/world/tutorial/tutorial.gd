@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var bgm = $AudioStreamPlayer2D
+@onready var bgm = $AudioStreamPlayer
 
 # Variable
 var bg = Color8(0, 142, 255) # Couleur du background
