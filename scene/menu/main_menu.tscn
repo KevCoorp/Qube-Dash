@@ -102,6 +102,7 @@ alignment = 0
 [node name="BGM" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_8o5by")
 autoplay = true
+attenuation = 0.0
 
 [node name="TextureButton" type="TextureButton" parent="."]
 layout_mode = 1
@@ -120,5 +121,6 @@ scale = Vector2(0.13, 0.13)
 texture_normal = ExtResource("6_rj4su")
 
 [connection signal="pressed" from="VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
