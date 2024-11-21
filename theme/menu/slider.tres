@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://c2ci2525gqa0d"]
+
+[ext_resource type="Texture2D" uid="uid://d2m866h8ip7r0" path="res://asset/texture/ui/menu/slider/grabber_hover.png" id="1_uplud"]
+[ext_resource type="Texture2D" uid="uid://s8qpj76e5dwh" path="res://asset/texture/ui/menu/slider/grabber_normal.png" id="2_ve8bd"]
+
+[resource]
+HSlider/icons/grabber = ExtResource("1_uplud")
+HSlider/icons/grabber_disabled = ExtResource("1_uplud")
+HSlider/icons/grabber_highlight = ExtResource("2_ve8bd")

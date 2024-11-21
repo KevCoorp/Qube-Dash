@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dnchj7fm0xocc"]
+[gd_scene load_steps=17 format=3 uid="uid://dnchj7fm0xocc"]
 
 [ext_resource type="Script" path="res://scripts/menu/main_menu.gd" id="1_jfth8"]
 [ext_resource type="Texture2D" uid="uid://bt3f2k1fpfaqb" path="res://asset/texture/bg/background1.png" id="1_s5scw"]
@@ -7,9 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://b3vd0nhlavpvf" path="res://asset/bgm/main_menu/main_menu.mp3" id="4_8o5by"]
 [ext_resource type="FontFile" uid="uid://cy02mhsv2d4bl" path="res://font/normal/PressStart2P-Regular.ttf" id="4_ju5a5"]
 [ext_resource type="Texture2D" uid="uid://cgyl4ly8ntjjh" path="res://asset/texture/logo/darklogo.png" id="6_rj4su"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_3jl0u"]
-font = ExtResource("4_ju5a5")
+[ext_resource type="Theme" uid="uid://c2ci2525gqa0d" path="res://theme/menu/slider.tres" id="7_jxkcl"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6rp2k"]
 
@@ -18,6 +16,17 @@ font = ExtResource("4_ju5a5")
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kugay"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tk6kc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3jl0u"]
+font = ExtResource("4_ju5a5")
+
+[sub_resource type="LabelSettings" id="LabelSettings_3l50o"]
+font_size = 47
+
+[sub_resource type="LabelSettings" id="LabelSettings_wb7bx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5p0wi"]
+font_size = 42
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -30,21 +39,67 @@ script = ExtResource("1_jfth8")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -576.0
-offset_right = 576.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_s5scw")
 
-[node name="LogoBeta" type="Sprite2D" parent="."]
-position = Vector2(265, 308)
-texture = ExtResource("2_0y7rp")
+[node name="Main" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="BuildTag" type="Label" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="Main"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 49.0
+offset_top = 359.0
+offset_right = 212.0
+offset_bottom = 511.0
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="NewGame" type="Button" parent="Main/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("4_1igts")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6rp2k")
+text = "New game"
+flat = true
+alignment = 0
+
+[node name="LoadGame" type="Button" parent="Main/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_1igts")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nwoa5")
+disabled = true
+text = "Load game"
+flat = true
+alignment = 0
+
+[node name="Settings" type="Button" parent="Main/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_1igts")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kugay")
+text = "Settings"
+flat = true
+alignment = 0
+
+[node name="Exit" type="Button" parent="Main/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_1igts")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tk6kc")
+text = "Exit"
+flat = true
+alignment = 0
+
+[node name="BuildTag" type="Label" parent="Main"]
 layout_mode = 0
 offset_left = 950.0
 offset_top = 19.0
@@ -54,73 +109,247 @@ text = "DEMO"
 label_settings = SubResource("LabelSettings_3jl0u")
 horizontal_alignment = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_left = 49.0
-offset_top = 359.0
-offset_right = 212.0
-offset_bottom = -72.0
-grow_vertical = 2
-size_flags_horizontal = 4
+[node name="LogoBeta" type="Sprite2D" parent="Main"]
+position = Vector2(265, 308)
+texture = ExtResource("2_0y7rp")
 
-[node name="NewGame" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme = ExtResource("4_1igts")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_6rp2k")
-text = "New game"
-flat = true
-alignment = 0
-
-[node name="LoadGame" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("4_1igts")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_nwoa5")
-disabled = true
-text = "Load game"
-flat = true
-alignment = 0
-
-[node name="Settings" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("4_1igts")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_kugay")
-text = "Settings"
-flat = true
-alignment = 0
-
-[node name="Exit" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("4_1igts")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_tk6kc")
-text = "Exit"
-flat = true
-alignment = 0
-
-[node name="BGM" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_8o5by")
-autoplay = true
-attenuation = 0.0
-
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="TextureButton" type="TextureButton" parent="Main"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 478.0
-offset_top = 233.0
-offset_right = 990.0
-offset_bottom = 745.0
+offset_left = 440.0
+offset_top = 228.0
+offset_right = 952.0
+offset_bottom = 740.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.13, 0.13)
 texture_normal = ExtResource("6_rj4su")
 
-[connection signal="pressed" from="VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
-[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
-[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[node name="Options" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Options"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.0
+offset_top = -71.5
+offset_right = 70.0
+offset_bottom = 71.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Graphics" type="Button" parent="Options/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_1igts")
+text = "Graphics"
+flat = true
+
+[node name="Audio" type="Button" parent="Options/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_1igts")
+text = "Audio"
+flat = true
+
+[node name="Credits" type="Button" parent="Options/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_1igts")
+text = "Credits"
+flat = true
+
+[node name="Back" type="Button" parent="Options"]
+layout_mode = 0
+offset_left = 1043.0
+offset_top = 21.0
+offset_right = 1122.0
+offset_bottom = 66.0
+theme = ExtResource("4_1igts")
+text = "Back"
+flat = true
+
+[node name="Graphics" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Graphics"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 100.0
+offset_top = -74.0
+offset_right = 214.0
+offset_bottom = 6.0
+grow_vertical = 2
+scale = Vector2(2, 2)
+
+[node name="Label" type="VBoxContainer" parent="Graphics/HBoxContainer"]
+layout_mode = 2
+
+[node name="Fullscreen" type="Label" parent="Graphics/HBoxContainer/Label"]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("4_1igts")
+text = "Fullscreen"
+
+[node name="Borderless" type="Label" parent="Graphics/HBoxContainer/Label"]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("4_1igts")
+text = "Borderless"
+
+[node name="VSync" type="Label" parent="Graphics/HBoxContainer/Label"]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("4_1igts")
+text = "VSync"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Graphics/HBoxContainer"]
+layout_mode = 2
+
+[node name="Fullscreen" type="CheckBox" parent="Graphics/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Borderless" type="CheckBox" parent="Graphics/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VSync" type="CheckBox" parent="Graphics/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="BackFromVideo" type="Button" parent="Graphics"]
+layout_mode = 0
+offset_left = 1043.0
+offset_top = 21.0
+offset_right = 1122.0
+offset_bottom = 66.0
+theme = ExtResource("4_1igts")
+text = "Back"
+flat = true
+
+[node name="GraphicsTitle" type="Label" parent="Graphics"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 187.0
+offset_right = 247.0
+offset_bottom = 245.0
+theme = ExtResource("4_1igts")
+text = "Graphics"
+label_settings = SubResource("LabelSettings_3l50o")
+
+[node name="Audio" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Audio"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 97.0
+offset_top = 236.0
+offset_right = 391.0
+offset_bottom = 304.0
+grow_vertical = 2
+scale = Vector2(2, 2)
+size_flags_horizontal = 0
+
+[node name="Label" type="VBoxContainer" parent="Audio/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Master" type="Label" parent="Audio/HBoxContainer/Label"]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("4_1igts")
+text = "Master"
+label_settings = SubResource("LabelSettings_wb7bx")
+
+[node name="Music" type="Label" parent="Audio/HBoxContainer/Label"]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("4_1igts")
+text = "Music"
+label_settings = SubResource("LabelSettings_wb7bx")
+
+[node name="Sound FX" type="Label" parent="Audio/HBoxContainer/Label"]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("4_1igts")
+text = "Sound FX"
+label_settings = SubResource("LabelSettings_wb7bx")
+
+[node name="Slider" type="VBoxContainer" parent="Audio/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="MasterSlide" type="HSlider" parent="Audio/HBoxContainer/Slider"]
+layout_mode = 2
+theme = ExtResource("7_jxkcl")
+step = 50.0
+value = 100.0
+
+[node name="MusicSlide" type="HSlider" parent="Audio/HBoxContainer/Slider"]
+layout_mode = 2
+
+[node name="SoundFXSlide" type="HSlider" parent="Audio/HBoxContainer/Slider"]
+layout_mode = 2
+
+[node name="AudioTitle" type="Label" parent="Audio"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 193.0
+offset_right = 146.0
+offset_bottom = 244.0
+theme = ExtResource("4_1igts")
+text = "Audio"
+label_settings = SubResource("LabelSettings_5p0wi")
+
+[node name="BackFromAudio" type="Button" parent="Audio"]
+layout_mode = 0
+offset_left = 1043.0
+offset_top = 21.0
+offset_right = 1122.0
+offset_bottom = 66.0
+theme = ExtResource("4_1igts")
+text = "Back"
+flat = true
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_8o5by")
+autoplay = true
+attenuation = 0.0
+
+[connection signal="pressed" from="Main/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="Main/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Main/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Main/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Options/VBoxContainer/Graphics" to="." method="_on_graphics_pressed"]
+[connection signal="pressed" from="Options/VBoxContainer/Audio" to="." method="_on_audio_pressed"]
+[connection signal="pressed" from="Options/Back" to="." method="_on_back_pressed"]
+[connection signal="toggled" from="Graphics/HBoxContainer/VBoxContainer/Fullscreen" to="." method="_on_fullscreen_toggled"]
+[connection signal="toggled" from="Graphics/HBoxContainer/VBoxContainer/Borderless" to="." method="_on_borderless_toggled"]
+[connection signal="toggled" from="Graphics/HBoxContainer/VBoxContainer/VSync" to="." method="_on_v_sync_toggled"]
+[connection signal="pressed" from="Graphics/BackFromVideo" to="." method="_on_back_from_video_pressed"]
+[connection signal="pressed" from="Audio/BackFromAudio" to="." method="_on_back_from_audio_pressed"]

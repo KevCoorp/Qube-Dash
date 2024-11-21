@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://3i3egmg0tryg" path="res://scene/misc/deathtimer/death_timer.tscn" id="9_yfxjw"]
 [ext_resource type="Theme" uid="uid://b5wdv7bibdjkt" path="res://theme/tutorial/TutorialText.tres" id="10_ynblj"]
 [ext_resource type="PackedScene" uid="uid://nf78dqab3iqa" path="res://scene/misc/fallzone/fallzone.tscn" id="11_jh3dn"]
-[ext_resource type="PackedScene" uid="uid://cjdamnk8vep0y" path="res://scene/game/switch/demo_end/demo_end.tscn" id="13_nmour"]
+[ext_resource type="PackedScene" uid="uid://cjdamnk8vep0y" path="res://scene/game/switch/switch_level.tscn" id="13_nmour"]
 [ext_resource type="AudioStream" uid="uid://dr6e48ov77is7" path="res://asset/bgm/overworld/overworld.mp3" id="13_y4mh7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e3ra1"]
