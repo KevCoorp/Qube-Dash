@@ -1,0 +1,12 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bfx3km4shsf3n"]
+
+[ext_resource type="Texture2D" uid="uid://s8qpj76e5dwh" path="res://asset/texture/ui/menu/slider/grabber_normal.png" id="1_ww1aa"]
+[ext_resource type="Texture2D" uid="uid://d2m866h8ip7r0" path="res://asset/texture/ui/menu/slider/grabber_hover.png" id="2_35odk"]
+
+[resource]
+CheckBox/font_sizes/font_size = 16
+CheckBox/icons/checked = ExtResource("1_ww1aa")
+CheckBox/icons/checked_disabled = ExtResource("2_35odk")
+CheckBox/icons/radio_unchecked_disabled = ExtResource("2_35odk")
+CheckBox/icons/unchecked = ExtResource("2_35odk")
+CheckBox/icons/unchecked_disabled = ExtResource("2_35odk")

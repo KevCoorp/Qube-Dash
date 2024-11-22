@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://3i3egmg0tryg" path="res://scene/misc/deathtimer/death_timer.tscn" id="9_yfxjw"]
 [ext_resource type="Theme" uid="uid://b5wdv7bibdjkt" path="res://theme/tutorial/TutorialText.tres" id="10_ynblj"]
 [ext_resource type="PackedScene" uid="uid://nf78dqab3iqa" path="res://scene/misc/fallzone/fallzone.tscn" id="11_jh3dn"]
-[ext_resource type="PackedScene" uid="uid://cjdamnk8vep0y" path="res://scene/game/switch/switch_level.tscn" id="13_nmour"]
+[ext_resource type="PackedScene" uid="uid://c4hnyiosujgf1" path="res://scene/game/switch/switch_to_end.tscn" id="13_3bihf"]
 [ext_resource type="AudioStream" uid="uid://dr6e48ov77is7" path="res://asset/bgm/overworld/overworld.mp3" id="13_y4mh7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e3ra1"]
@@ -59,7 +59,7 @@ layer_7/z_index = -1
 layer_7/tile_data = PackedInt32Array(90, 2, 0, 91, 65538, 0, 92, 131074, 0, 93, 196610, 0, 94, 262146, 0, 95, 327682, 0, 41, 2, 0, 42, 65538, 0, 50, 196610, 0, 51, 327682, 0, 43, 131074, 0, 44, 196610, 0, 45, 131074, 0, 46, 196610, 0, 47, 131074, 0, 48, 196610, 0, 49, 131074, 0, 65533, 131074, 0, 65534, 196610, 0, 65535, 131074, 0, 0, 196610, 0, 1, 131074, 0, 2, 196610, 0, 3, 131074, 0, 4, 196610, 0, 5, 131074, 0, 6, 196610, 0, 7, 131074, 0, 8, 196610, 0, 9, 131074, 0, 10, 196610, 0, 11, 262146, 0, 12, 327682, 0)
 
 [node name="Player" parent="." instance=ExtResource("1_r7i87")]
-position = Vector2(33, 18)
+position = Vector2(14, 18)
 
 [node name="Red_Enemy" parent="." instance=ExtResource("5_wy4hw")]
 position = Vector2(808, -112)
@@ -286,5 +286,5 @@ shape = SubResource("RectangleShape2D_e3ra1")
 stream = ExtResource("13_y4mh7")
 autoplay = true
 
-[node name="SwitchLevel2" parent="." instance=ExtResource("13_nmour")]
-position = Vector2(5159, 18)
+[node name="SwitchToEnd" parent="." instance=ExtResource("13_3bihf")]
+position = Vector2(5131, 19)

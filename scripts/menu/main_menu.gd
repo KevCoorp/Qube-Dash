@@ -53,19 +53,30 @@ func _on_back_pressed():
 	
 func _on_fullscreen_toggled(toggled_on):
 	if toggled_on:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
-	else:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	if not toggled_on:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 
 func _on_borderless_toggled(toggled_on):
 	if toggled_on:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-	else:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
+	if not toggled_on:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
 
 func _on_v_sync_toggled(toggled_on):
 	if toggled_on:
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
-	else:
+	if not toggled_on:
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
 		
+func _on_master_slide_value_changed(value):
+	volume(0, value)
+	
+func volume(bus_index, value):
+	AudioServer.set_bus_volume_db(bus_index, value)
+
+func _on_music_value_changed(value):
+	volume(1, value)
+	
+func _on_sound_fx_value_changed(value):
+	volume(2, value)
