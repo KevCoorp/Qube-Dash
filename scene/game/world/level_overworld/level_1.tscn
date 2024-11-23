@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://p1q7s0474hi2"]
+[gd_scene load_steps=14 format=3 uid="uid://p1q7s0474hi2"]
 
 [ext_resource type="PackedScene" uid="uid://63mbr0wkja1" path="res://game/pause_menu/pause_menu.tscn" id="1_aes7m"]
 [ext_resource type="PackedScene" uid="uid://cuci3orvsdp1u" path="res://scene/sprite/player/player.tscn" id="1_r7i87"]
@@ -12,7 +12,6 @@
 [ext_resource type="Theme" uid="uid://b5wdv7bibdjkt" path="res://theme/tutorial/TutorialText.tres" id="10_ynblj"]
 [ext_resource type="PackedScene" uid="uid://nf78dqab3iqa" path="res://scene/misc/fallzone/fallzone.tscn" id="11_jh3dn"]
 [ext_resource type="PackedScene" uid="uid://c4hnyiosujgf1" path="res://scene/game/switch/switch_to_end.tscn" id="13_3bihf"]
-[ext_resource type="AudioStream" uid="uid://dr6e48ov77is7" path="res://asset/bgm/overworld/overworld.mp3" id="13_y4mh7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e3ra1"]
 size = Vector2(74, 68)
@@ -281,10 +280,6 @@ shape = SubResource("RectangleShape2D_e3ra1")
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Fallzone"]
 position = Vector2(5009, 203)
 shape = SubResource("RectangleShape2D_e3ra1")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("13_y4mh7")
-autoplay = true
 
 [node name="SwitchToEnd" parent="." instance=ExtResource("13_3bihf")]
 position = Vector2(5131, 19)

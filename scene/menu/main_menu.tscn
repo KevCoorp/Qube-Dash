@@ -1,11 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://dnchj7fm0xocc"]
+[gd_scene load_steps=16 format=3 uid="uid://dnchj7fm0xocc"]
 
 [ext_resource type="Script" path="res://scripts/menu/main_menu.gd" id="1_jfth8"]
 [ext_resource type="Texture2D" uid="uid://bt3f2k1fpfaqb" path="res://asset/texture/bg/background1.png" id="1_s5scw"]
 [ext_resource type="Texture2D" uid="uid://by3j28p46bxu5" path="res://asset/texture/ui/misc/logo/logo_beta.png" id="2_0y7rp"]
 [ext_resource type="StyleBox" uid="uid://co358ecpaou65" path="res://scene/menu/syleboxflat.tres" id="4_0olpa"]
 [ext_resource type="Theme" uid="uid://brei3ep73waux" path="res://theme/menu/main_menu.tres" id="4_1igts"]
-[ext_resource type="AudioStream" uid="uid://b3vd0nhlavpvf" path="res://asset/bgm/main_menu/main_menu.mp3" id="4_8o5by"]
 [ext_resource type="FontFile" uid="uid://cy02mhsv2d4bl" path="res://font/normal/PressStart2P-Regular.ttf" id="4_ju5a5"]
 [ext_resource type="Texture2D" uid="uid://cgyl4ly8ntjjh" path="res://asset/texture/logo/darklogo.png" id="6_rj4su"]
 [ext_resource type="Theme" uid="uid://c2ci2525gqa0d" path="res://theme/menu/slider.tres" id="7_jxkcl"]
@@ -340,12 +339,6 @@ theme = ExtResource("4_1igts")
 theme_override_styles/focus = ExtResource("4_0olpa")
 text = "Back"
 flat = true
-
-[node name="BGM" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_8o5by")
-autoplay = true
-attenuation = 0.0
-bus = &"Music"
 
 [connection signal="pressed" from="Main/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="Main/VBoxContainer/Settings" to="." method="_on_settings_pressed"]

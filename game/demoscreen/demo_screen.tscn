@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://cgocjmjwyfi25"]
+[gd_scene load_steps=5 format=3 uid="uid://cgocjmjwyfi25"]
 
 [ext_resource type="Theme" uid="uid://brei3ep73waux" path="res://theme/menu/main_menu.tres" id="1_cgh02"]
+[ext_resource type="Script" path="res://scripts/misc/demoscreen/demo_screen.gd" id="1_mr7fj"]
+[ext_resource type="StyleBox" uid="uid://co358ecpaou65" path="res://scene/menu/syleboxflat.tres" id="3_1t17j"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xc83t"]
-font_size = 26
+font_size = 32
 
 [node name="DemoScreen" type="Control"]
 layout_mode = 3
@@ -12,6 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_mr7fj")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -38,3 +41,23 @@ grow_vertical = 2
 theme = ExtResource("1_cgh02")
 text = "Thank you for playing the Qube Dash demo!"
 label_settings = SubResource("LabelSettings_xc83t")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -115.5
+offset_top = -148.0
+offset_right = 115.5
+offset_bottom = -117.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("1_cgh02")
+theme_override_styles/focus = ExtResource("3_1t17j")
+text = "Click to return to main menu"
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
