@@ -145,15 +145,10 @@ rotation = -3.14159
 scale = Vector2(2.2605, -10.7972)
 shape = SubResource("RectangleShape2D_nvgu3")
 
-[node name="RedEnemy" parent="." instance=ExtResource("7_76lp4")]
-position = Vector2(1839.87, 432)
-
-[node name="RedEnemy2" parent="." instance=ExtResource("7_76lp4")]
-position = Vector2(2948.6, 432)
-floor_constant_speed = true
-
 [node name="Spikes" type="Node2D" parent="."]
+light_mask = 2
 position = Vector2(3273.11, 474)
+scale = Vector2(1, 1)
 
 [node name="Spikes" parent="Spikes" instance=ExtResource("8_vgot1")]
 position = Vector2(-4.00601, 2.00003)
@@ -238,6 +233,12 @@ position = Vector2(-435.684, -30)
 
 [node name="Spikes30" parent="Spikes" instance=ExtResource("8_vgot1")]
 position = Vector2(-422.664, -30)
+
+[node name="RedEnemy" parent="." instance=ExtResource("7_76lp4")]
+position = Vector2(1839.87, 432)
+
+[node name="RedEnemy2" parent="." instance=ExtResource("7_76lp4")]
+position = Vector2(2776.33, 432)
 
 [node name="Coins" type="Node2D" parent="."]
 position = Vector2(3111.85, 430)
