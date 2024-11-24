@@ -1,9 +1,10 @@
 extends CharacterBody2D
 
-const SPEED = 40 # Vitesse
+const SPEED = 45 # Vitesse
 
 @onready var ray_left = $RayLeft
 @onready var ray_right = $RayRight
+
 
 var direction = 1
 

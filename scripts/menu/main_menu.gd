@@ -4,6 +4,8 @@ extends Control
 @onready var graphics = $Graphics
 @onready var audio = $Audio
 @onready var main = $Main
+@onready var credits = $Credits
+
 
 
 func _ready():
@@ -80,3 +82,10 @@ func _on_music_value_changed(value):
 	
 func _on_sound_fx_value_changed(value):
 	volume(2, value)
+
+
+func _on_back_from_credits_pressed():
+	show_and_hide(options, credits)
+	
+func _on_credits_pressed():
+	show_and_hide(credits, options)

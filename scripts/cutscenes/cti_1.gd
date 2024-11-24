@@ -42,3 +42,7 @@ func update_scene():
 	current_scene += 1
 	if current_scene > 5:
 		current_scene = 1
+
+
+func _on_skip_button_pressed():
+	get_tree().change_scene_to_file("res://scene/game/tutorial/tutorial.tscn")

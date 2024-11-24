@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dnchj7fm0xocc"]
+[gd_scene load_steps=17 format=3 uid="uid://dnchj7fm0xocc"]
 
 [ext_resource type="Script" path="res://scripts/menu/main_menu.gd" id="1_jfth8"]
 [ext_resource type="Texture2D" uid="uid://bt3f2k1fpfaqb" path="res://asset/texture/bg/background1.png" id="1_s5scw"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cgyl4ly8ntjjh" path="res://asset/texture/logo/darklogo.png" id="6_rj4su"]
 [ext_resource type="Theme" uid="uid://c2ci2525gqa0d" path="res://theme/menu/slider.tres" id="7_jxkcl"]
 [ext_resource type="Theme" uid="uid://bfx3km4shsf3n" path="res://theme/menu/checkbox.tres" id="8_1oqn0"]
+[ext_resource type="PackedScene" uid="uid://cmmk31d282i46" path="res://credits/GodotCredits.tscn" id="10_5h807"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kugay"]
 
@@ -340,12 +341,57 @@ theme_override_styles/focus = ExtResource("4_0olpa")
 text = "Back"
 flat = true
 
+[node name="Credits" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 111.0
+offset_right = 32.0
+offset_bottom = 111.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Credits" parent="Credits" instance=ExtResource("10_5h807")]
+layout_mode = 1
+offset_left = -32.0
+offset_top = -111.0
+offset_right = -32.0
+offset_bottom = -111.0
+text_color = Color(0, 0, 0, 1)
+
+[node name="BackFromCredits" type="Button" parent="Credits"]
+layout_mode = 0
+offset_left = 1011.0
+offset_top = -90.0
+offset_right = 1090.0
+offset_bottom = -45.0
+theme = ExtResource("4_1igts")
+theme_override_styles/focus = ExtResource("4_0olpa")
+text = "Back"
+flat = true
+
+[node name="Label" type="Label" parent="Credits"]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 129.0
+offset_right = 571.0
+offset_bottom = 152.0
+theme = ExtResource("4_1igts")
+
+[node name="LogoBeta" type="Sprite2D" parent="Credits"]
+position = Vector2(544, 1)
+texture = ExtResource("2_0y7rp")
+
 [connection signal="pressed" from="Main/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="Main/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Main/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Main/TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="Options/VBoxContainer/Graphics" to="." method="_on_graphics_pressed"]
 [connection signal="pressed" from="Options/VBoxContainer/Audio" to="." method="_on_audio_pressed"]
+[connection signal="pressed" from="Options/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Options/Back" to="." method="_on_back_pressed"]
 [connection signal="toggled" from="Graphics/HBoxContainer/VBoxContainer/Fullscreen" to="." method="_on_fullscreen_toggled"]
 [connection signal="toggled" from="Graphics/HBoxContainer/VBoxContainer/Borderless" to="." method="_on_borderless_toggled"]
@@ -355,3 +401,4 @@ flat = true
 [connection signal="value_changed" from="Audio/HBoxContainer/Slider/Music" to="." method="_on_music_value_changed"]
 [connection signal="value_changed" from="Audio/HBoxContainer/Slider/Sound FX" to="." method="_on_sound_fx_value_changed"]
 [connection signal="pressed" from="Audio/BackFromAudio" to="." method="_on_back_from_audio_pressed"]
+[connection signal="pressed" from="Credits/BackFromCredits" to="." method="_on_back_from_credits_pressed"]

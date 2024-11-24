@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dv4owqc15gbfh"]
+[gd_scene load_steps=8 format=3 uid="uid://dv4owqc15gbfh"]
 
 [ext_resource type="Script" path="res://scripts/cutscenes/cti_1.gd" id="1_lm7ri"]
 [ext_resource type="Theme" uid="uid://cyjj6uugb2p1g" path="res://theme/tutorial/CinematicText.tres" id="1_tufs4"]
@@ -6,13 +6,13 @@
 [ext_resource type="Texture2D" uid="uid://b21dpxa26dfmo" path="res://game/cutscenes/graphics/intro/sc2.png" id="4_myql4"]
 [ext_resource type="Texture2D" uid="uid://dmcjoxhho3xrt" path="res://game/cutscenes/graphics/intro/sc3.png" id="5_6dsjm"]
 [ext_resource type="Texture2D" uid="uid://bu3yp2uxncj5h" path="res://game/cutscenes/graphics/intro/sc4.png" id="6_dd23o"]
+[ext_resource type="StyleBox" uid="uid://co358ecpaou65" path="res://scene/menu/syleboxflat.tres" id="7_4hi3u"]
 
 [node name="CTI_1" type="Node2D"]
 script = ExtResource("1_lm7ri")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -1.0
-offset_right = 1151.0
+offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0, 0, 0, 1)
 
@@ -145,3 +145,16 @@ scale = Vector2(2.5, 2.5)
 size_flags_horizontal = 4
 theme = ExtResource("1_tufs4")
 text = "Press [K] to continue"
+
+[node name="SkipButton" type="Button" parent="."]
+offset_left = 1040.0
+offset_top = 40.0
+offset_right = 1080.0
+offset_bottom = 56.0
+scale = Vector2(2.16, 2.16)
+theme = ExtResource("1_tufs4")
+theme_override_styles/focus = ExtResource("7_4hi3u")
+text = "Skip"
+flat = true
+
+[connection signal="pressed" from="SkipButton" to="." method="_on_skip_button_pressed"]

@@ -98,7 +98,7 @@ text = "Press [E] to capture the flag!"
 position = Vector2(4948.72, 402)
 
 [node name="Player" parent="." instance=ExtResource("2_amhw8")]
-position = Vector2(-33.0516, 434)
+position = Vector2(2739.27, 405)
 
 [node name="Wall" type="StaticBody2D" parent="."]
 position = Vector2(80, 304)
@@ -149,7 +149,8 @@ shape = SubResource("RectangleShape2D_nvgu3")
 position = Vector2(1839.87, 432)
 
 [node name="RedEnemy2" parent="." instance=ExtResource("7_76lp4")]
-position = Vector2(3075.8, 432)
+position = Vector2(2948.6, 432)
+floor_constant_speed = true
 
 [node name="Spikes" type="Node2D" parent="."]
 position = Vector2(3273.11, 474)

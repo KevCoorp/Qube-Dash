@@ -24,10 +24,10 @@ visible = false
 [node name="ColorRect" type="ColorRect" parent="."]
 visibility_layer = 16
 z_index = -6
-offset_left = -1589.0
-offset_top = -1457.0
-offset_right = 8858.0
-offset_bottom = 1432.0
+offset_left = -1610.0
+offset_top = -1475.0
+offset_right = 8837.0
+offset_bottom = 1414.0
 color = Color(0, 0.556863, 1, 1)
 metadata/_edit_use_anchors_ = true
 
@@ -199,37 +199,68 @@ position = Vector2(1153, 44)
 [node name="Spikes29" parent="Spikes" instance=ExtResource("6_ydko7")]
 position = Vector2(1167, 44)
 
-[node name="Coin" parent="." instance=ExtResource("4_366sv")]
-position = Vector2(656, -40)
+[node name="Coins" type="Node2D" parent="."]
+position = Vector2(1264, -30)
 
-[node name="Coin3" parent="Coin" instance=ExtResource("4_366sv")]
-position = Vector2(608, 10)
+[node name="Coin3" parent="Coins" instance=ExtResource("4_366sv")]
 
-[node name="Coin2" parent="Coin" instance=ExtResource("4_366sv")]
-position = Vector2(384, 0)
+[node name="Coin2" parent="Coins" instance=ExtResource("4_366sv")]
+position = Vector2(-224, -10)
 
-[node name="Coin4" parent="Coin" instance=ExtResource("4_366sv")]
-position = Vector2(1056, 10)
+[node name="Coin4" parent="Coins" instance=ExtResource("4_366sv")]
+position = Vector2(448, 0)
 
-[node name="Coin5" parent="Coin" instance=ExtResource("4_366sv")]
-position = Vector2(2750, 64)
+[node name="Coin5" parent="Coins" instance=ExtResource("4_366sv")]
+position = Vector2(2241, 14)
 
-[node name="Flying_Bird" parent="." instance=ExtResource("8_7kubn")]
+[node name="Coin10" parent="Coins" instance=ExtResource("4_366sv")]
+position = Vector2(2717, -14)
+
+[node name="Coin11" parent="Coins" instance=ExtResource("4_366sv")]
+position = Vector2(2911, -15)
+
+[node name="Coin12" parent="Coins" instance=ExtResource("4_366sv")]
+position = Vector2(3520, 55)
+
+[node name="Coin13" parent="Coins" instance=ExtResource("4_366sv")]
+position = Vector2(3565, 55)
+
+[node name="Coin14" parent="Coins" instance=ExtResource("4_366sv")]
+position = Vector2(3607, 55)
+
+[node name="Coin9" parent="Coins" instance=ExtResource("4_366sv")]
+position = Vector2(2049, 12)
+
+[node name="Coin6" parent="Coins" instance=ExtResource("4_366sv")]
+position = Vector2(1711, -10)
+
+[node name="Coin7" parent="Coins" instance=ExtResource("4_366sv")]
+position = Vector2(1565, -10)
+
+[node name="Coin8" parent="Coins" instance=ExtResource("4_366sv")]
+position = Vector2(1423, -9)
+
+[node name="Coin" parent="Coins" instance=ExtResource("4_366sv")]
+position = Vector2(-608, -10)
+
+[node name="Bird" type="Node2D" parent="."]
+
+[node name="Flying_Bird" parent="Bird" instance=ExtResource("8_7kubn")]
 position = Vector2(119, -167)
 
-[node name="Flying_Bird2" parent="." instance=ExtResource("8_7kubn")]
+[node name="Flying_Bird2" parent="Bird" instance=ExtResource("8_7kubn")]
 position = Vector2(1019, -184)
 
-[node name="Flying_Bird3" parent="." instance=ExtResource("8_7kubn")]
+[node name="Flying_Bird3" parent="Bird" instance=ExtResource("8_7kubn")]
 position = Vector2(1514, -116)
 
-[node name="Flying_Bird4" parent="." instance=ExtResource("8_7kubn")]
+[node name="Flying_Bird4" parent="Bird" instance=ExtResource("8_7kubn")]
 position = Vector2(2285, -131)
 
-[node name="Flying_Bird5" parent="." instance=ExtResource("8_7kubn")]
+[node name="Flying_Bird5" parent="Bird" instance=ExtResource("8_7kubn")]
 position = Vector2(2846, -200)
 
-[node name="Flying_Bird6" parent="." instance=ExtResource("8_7kubn")]
+[node name="Flying_Bird6" parent="Bird" instance=ExtResource("8_7kubn")]
 position = Vector2(3735, -102)
 
 [node name="DeathTimer" parent="." instance=ExtResource("9_yfxjw")]

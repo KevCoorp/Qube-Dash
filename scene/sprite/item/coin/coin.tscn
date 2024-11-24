@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://duyyabjkkmu2y"]
+[gd_scene load_steps=11 format=3 uid="uid://duyyabjkkmu2y"]
 
 [ext_resource type="Script" path="res://scripts/sprite/item/coin/coin.gd" id="1_4c2u2"]
 [ext_resource type="Texture2D" uid="uid://cwpddbooj2vdu" path="res://asset/texture/item/coin/coin_anim.png" id="1_xm6bo"]
@@ -29,6 +29,66 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_p40hg"]
 radius = 6.0
 
+[sub_resource type="Animation" id="Animation_vuwjj"]
+resource_name = "pick_up"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -15)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_j3qvo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4cwjt"]
+_data = {
+"RESET": SubResource("Animation_j3qvo"),
+"pick_up": SubResource("Animation_vuwjj")
+}
+
 [node name="Coin" type="Area2D" groups=["coin"]]
 script = ExtResource("1_4c2u2")
 
@@ -44,5 +104,10 @@ position = Vector2(-1, 0)
 stream = ExtResource("3_ofldl")
 attenuation = 0.0
 bus = &"Sound FX"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4cwjt")
+}
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
