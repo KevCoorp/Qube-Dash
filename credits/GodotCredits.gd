@@ -44,6 +44,9 @@ var credits = [
 		"Sound Effects",
 		"KevFR"
 	],[
+		"Music",
+		"Jan125"
+	],[
 		"Tools used",
 		"Developed with Godot Engine",
 		"https://godotengine.org/license",

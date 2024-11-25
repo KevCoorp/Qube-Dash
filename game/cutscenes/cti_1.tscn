@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dv4owqc15gbfh"]
+[gd_scene load_steps=9 format=3 uid="uid://dv4owqc15gbfh"]
 
 [ext_resource type="Script" path="res://scripts/cutscenes/cti_1.gd" id="1_lm7ri"]
 [ext_resource type="Theme" uid="uid://cyjj6uugb2p1g" path="res://theme/tutorial/CinematicText.tres" id="1_tufs4"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dmcjoxhho3xrt" path="res://game/cutscenes/graphics/intro/sc3.png" id="5_6dsjm"]
 [ext_resource type="Texture2D" uid="uid://bu3yp2uxncj5h" path="res://game/cutscenes/graphics/intro/sc4.png" id="6_dd23o"]
 [ext_resource type="StyleBox" uid="uid://co358ecpaou65" path="res://scene/menu/syleboxflat.tres" id="7_4hi3u"]
+[ext_resource type="AudioStream" uid="uid://cwprhsqiqohmn" path="res://asset/bgm/ct1_theme.ogg" id="8_ye64k"]
 
 [node name="CTI_1" type="Node2D"]
 script = ExtResource("1_lm7ri")
@@ -156,5 +157,10 @@ theme = ExtResource("1_tufs4")
 theme_override_styles/focus = ExtResource("7_4hi3u")
 text = "Skip"
 flat = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_ye64k")
+autoplay = true
+attenuation = 0.0
 
 [connection signal="pressed" from="SkipButton" to="." method="_on_skip_button_pressed"]

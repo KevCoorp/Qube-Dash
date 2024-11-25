@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dnchj7fm0xocc"]
+[gd_scene load_steps=19 format=3 uid="uid://dnchj7fm0xocc"]
 
 [ext_resource type="Script" path="res://scripts/menu/main_menu.gd" id="1_jfth8"]
 [ext_resource type="Texture2D" uid="uid://bt3f2k1fpfaqb" path="res://asset/texture/bg/background1.png" id="1_s5scw"]
@@ -10,6 +10,7 @@
 [ext_resource type="Theme" uid="uid://c2ci2525gqa0d" path="res://theme/menu/slider.tres" id="7_jxkcl"]
 [ext_resource type="Theme" uid="uid://bfx3km4shsf3n" path="res://theme/menu/checkbox.tres" id="8_1oqn0"]
 [ext_resource type="PackedScene" uid="uid://cmmk31d282i46" path="res://credits/GodotCredits.tscn" id="10_5h807"]
+[ext_resource type="AudioStream" uid="uid://v7hn735vooky" path="res://asset/bgm/main_menu.ogg" id="11_6gj2i"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kugay"]
 
@@ -17,6 +18,8 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_3jl0u"]
 font = ExtResource("4_ju5a5")
+
+[sub_resource type="LabelSettings" id="LabelSettings_wcoyb"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3l50o"]
 font_size = 47
@@ -117,6 +120,16 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.13, 0.13)
 texture_normal = ExtResource("6_rj4su")
+
+[node name="Label" type="Label" parent="Main"]
+layout_mode = 0
+offset_left = 1040.0
+offset_top = 40.0
+offset_right = 1135.0
+offset_bottom = 63.0
+theme = ExtResource("4_1igts")
+text = "Version 1.02"
+label_settings = SubResource("LabelSettings_wcoyb")
 
 [node name="Options" type="Control" parent="."]
 visible = false
@@ -383,6 +396,11 @@ theme = ExtResource("4_1igts")
 [node name="LogoBeta" type="Sprite2D" parent="Credits"]
 position = Vector2(544, 1)
 texture = ExtResource("2_0y7rp")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_6gj2i")
+autoplay = true
+attenuation = 0.0
 
 [connection signal="pressed" from="Main/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="Main/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
