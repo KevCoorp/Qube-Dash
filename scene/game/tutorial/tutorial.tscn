@@ -148,7 +148,6 @@ shape = SubResource("RectangleShape2D_nvgu3")
 [node name="Spikes" type="Node2D" parent="."]
 light_mask = 2
 position = Vector2(3273.11, 474)
-scale = Vector2(1, 1)
 
 [node name="Spikes" parent="Spikes" instance=ExtResource("8_vgot1")]
 position = Vector2(-4.00601, 2.00003)

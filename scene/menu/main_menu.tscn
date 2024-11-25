@@ -360,7 +360,6 @@ offset_left = -32.0
 offset_top = -111.0
 offset_right = -32.0
 offset_bottom = -111.0
-text_color = Color(0, 0, 0, 1)
 
 [node name="BackFromCredits" type="Button" parent="Credits"]
 layout_mode = 0
