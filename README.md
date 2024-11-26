@@ -1,17 +1,21 @@
 # Qube Dash
-## Synopsis
-🎮 - Qube Dash is a free platformer indie game in development
+## Introduction
+🎮Qube Dash is is a platform game with cubes!
 
-## Systems requierement
+## System requierement
+- Windows or Linux supported
 
-## Assets used 
-🎵 - N/A
-✍️ - Fonts: https://fonts.google.com/specimen/Press+Start+2P
+## About the game
+- ⚙Game engine: Godot Engine 4
+- 🎨Graphics: Aseprite, Paint.NET, Figma (for marketing)
+- 🎵SFX: Beepbox, Freesound
+  
+## Credits
+- Main developer: KevFR
+- Music: https://opengameart.org/users/jan125
 
-## Software used for making the game
-<li>🖌️- Graphism: Aseprite and Paint.NET</li>
-<li>🎹- SFX/BGM: Beepbox</li>
-<li>⚙️- Game ening: Godot Engine (4.x)</li>
+**KevCorp © 2024** 
+
 
 
 
