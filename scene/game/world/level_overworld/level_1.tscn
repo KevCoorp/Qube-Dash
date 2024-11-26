@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://p1q7s0474hi2"]
+[gd_scene load_steps=15 format=3 uid="uid://p1q7s0474hi2"]
 
 [ext_resource type="PackedScene" uid="uid://63mbr0wkja1" path="res://game/pause_menu/pause_menu.tscn" id="1_aes7m"]
 [ext_resource type="PackedScene" uid="uid://cuci3orvsdp1u" path="res://scene/sprite/player/player.tscn" id="1_r7i87"]
@@ -12,6 +12,7 @@
 [ext_resource type="Theme" uid="uid://b5wdv7bibdjkt" path="res://theme/tutorial/TutorialText.tres" id="10_ynblj"]
 [ext_resource type="PackedScene" uid="uid://nf78dqab3iqa" path="res://scene/misc/fallzone/fallzone.tscn" id="11_jh3dn"]
 [ext_resource type="PackedScene" uid="uid://c4hnyiosujgf1" path="res://scene/game/switch/switch_to_end.tscn" id="13_3bihf"]
+[ext_resource type="AudioStream" uid="uid://cqbcjpotkw6d3" path="res://asset/bgm/level1.ogg" id="13_7cthq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e3ra1"]
 size = Vector2(74, 68)
@@ -211,13 +212,13 @@ position = Vector2(-224, -10)
 position = Vector2(448, 0)
 
 [node name="Coin5" parent="Coins" instance=ExtResource("4_366sv")]
-position = Vector2(2241, 14)
+position = Vector2(2236, -4)
 
 [node name="Coin10" parent="Coins" instance=ExtResource("4_366sv")]
-position = Vector2(2717, -14)
+position = Vector2(2717, -26)
 
 [node name="Coin11" parent="Coins" instance=ExtResource("4_366sv")]
-position = Vector2(2911, -15)
+position = Vector2(2910, -25)
 
 [node name="Coin12" parent="Coins" instance=ExtResource("4_366sv")]
 position = Vector2(3520, 55)
@@ -229,7 +230,7 @@ position = Vector2(3565, 55)
 position = Vector2(3607, 55)
 
 [node name="Coin9" parent="Coins" instance=ExtResource("4_366sv")]
-position = Vector2(2049, 12)
+position = Vector2(2048, 0)
 
 [node name="Coin6" parent="Coins" instance=ExtResource("4_366sv")]
 position = Vector2(1711, -10)
@@ -314,3 +315,7 @@ shape = SubResource("RectangleShape2D_e3ra1")
 
 [node name="SwitchToEnd" parent="." instance=ExtResource("13_3bihf")]
 position = Vector2(5131, 19)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_7cthq")
+autoplay = true

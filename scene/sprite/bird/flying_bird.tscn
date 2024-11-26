@@ -51,7 +51,7 @@ scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_lyqup")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.453325
+frame_progress = 0.143976
 
 [node name="RayLeft" type="RayCast2D" parent="."]
 target_position = Vector2(-15, 0)
