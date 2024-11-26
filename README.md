@@ -2,6 +2,9 @@
 ## Introduction
 🎮Qube Dash is is a platform game with cubes!
 
+## Where you find the game?
+Available on: [Itch.io](https://kevfr8.itch.io/qube-dash)
+
 ## System requierement
 - Windows or Linux supported
 
