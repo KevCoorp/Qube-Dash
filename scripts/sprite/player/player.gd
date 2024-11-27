@@ -37,6 +37,7 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
+	
 	move_and_slide()
 
 func die():
@@ -44,7 +45,8 @@ func die():
 	anim.show() # Afficher l'animation
 	$AnimatedSprite2D.play("die") # Jouer l'animation
 	await $AnimatedSprite2D.animation_finished # Attendre que l'animation sois finit
-	get_tree().reload_current_scene() # Recommencer la scène
+	if get_tree():
+		get_tree().reload_current_scene() # Recommencer la scène
 	
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("coin"):

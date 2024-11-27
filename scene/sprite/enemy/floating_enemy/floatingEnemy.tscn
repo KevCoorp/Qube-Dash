@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b5ekbwv7xamgy"]
+[gd_scene load_steps=10 format=3 uid="uid://b5ekbwv7xamgy"]
 
 [ext_resource type="Texture2D" uid="uid://hs6kl211qvdc" path="res://asset/texture/sprite/enemy/floating_enemy/floating_enemy.png" id="1_e1jjr"]
 [ext_resource type="Script" path="res://scripts/sprite/enemy/floating_enemy/floatingEnemy.gd" id="1_i6uys"]
@@ -42,6 +42,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ibykc"]
 size = Vector2(15.5, 13)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ykddo"]
+size = Vector2(24, 21)
+
 [node name="FloatingEnemy" type="CharacterBody2D"]
 script = ExtResource("1_i6uys")
 
@@ -59,4 +62,11 @@ shape = SubResource("RectangleShape2D_ibykc")
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_ykddo")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

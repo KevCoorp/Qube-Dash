@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Qube Dash"
 config/description="A plateformer game with cube "
-config/version="1.0.1"
+config/version="1.0.2"
 run/main_scene="res://scene/menu/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 boot_splash/image="res://asset/texture/splash/betsplash.png"
