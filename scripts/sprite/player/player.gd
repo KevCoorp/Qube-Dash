@@ -2,7 +2,7 @@ extends CharacterBody2D
 class_name Player 
 
 # Constantes
-const SPEED = 150.0 # Vitesse
+var SPEED  = 150.0 # Vitesse
 const JUMP_VELOCITY = -355 # Velocité du saut
 
 # Export des variables

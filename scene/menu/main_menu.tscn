@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cgyl4ly8ntjjh" path="res://asset/texture/logo/darklogo.png" id="6_rj4su"]
 [ext_resource type="Theme" uid="uid://c2ci2525gqa0d" path="res://theme/menu/slider.tres" id="7_jxkcl"]
 [ext_resource type="Theme" uid="uid://bfx3km4shsf3n" path="res://theme/menu/checkbox.tres" id="8_1oqn0"]
-[ext_resource type="PackedScene" uid="uid://cmmk31d282i46" path="res://CREDITS/GodotCredits.tscn" id="10_5h807"]
+[ext_resource type="PackedScene" uid="uid://cmmk31d282i46" path="res://credits/GodotCredits.tscn" id="10_5h807"]
 [ext_resource type="AudioStream" uid="uid://v7hn735vooky" path="res://asset/bgm/main_menu.ogg" id="11_6gj2i"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kugay"]
