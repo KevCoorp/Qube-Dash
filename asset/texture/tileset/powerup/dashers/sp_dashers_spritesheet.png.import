@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djn5cf0kkkljx"
-path="res://.godot/imported/logo64.png-d27999f558674a2d59f07ff3fb17d0e9.ctex"
+uid="uid://d1trejro30a8c"
+path="res://.godot/imported/sp_dashers_spritesheet.png-c0c5199d1d89cbd32ba25cbb1c490a23.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CREDITS/logo64.png"
-dest_files=["res://.godot/imported/logo64.png-d27999f558674a2d59f07ff3fb17d0e9.ctex"]
+source_file="res://asset/texture/tileset/powerup/dashers/sp_dashers_spritesheet.png"
+dest_files=["res://.godot/imported/sp_dashers_spritesheet.png-c0c5199d1d89cbd32ba25cbb1c490a23.ctex"]
 
 [params]
 

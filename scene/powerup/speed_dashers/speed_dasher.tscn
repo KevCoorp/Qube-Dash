@@ -1,13 +1,138 @@
-[gd_scene load_steps=3 format=3 uid="uid://c8effmc0uyufe"]
+[gd_scene load_steps=19 format=3 uid="uid://c8effmc0uyufe"]
 
 [ext_resource type="Script" path="res://scripts/powerup/speed_dashers/speed_dasher.gd" id="1_kyq8y"]
-[ext_resource type="Texture2D" uid="uid://dy7xhi8vfaw0i" path="res://asset/texture/sprite/bird/bird_spritesheet.png" id="2_4ntb6"]
+[ext_resource type="Texture2D" uid="uid://d1trejro30a8c" path="res://asset/texture/tileset/powerup/dashers/sp_dashers_spritesheet.png" id="2_k376k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awfkk"]
+atlas = ExtResource("2_k376k")
+region = Rect2(192, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p7d3g"]
+atlas = ExtResource("2_k376k")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6pnxl"]
+atlas = ExtResource("2_k376k")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gx58"]
+atlas = ExtResource("2_k376k")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8fp0k"]
+atlas = ExtResource("2_k376k")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x464g"]
+atlas = ExtResource("2_k376k")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fvgi"]
+atlas = ExtResource("2_k376k")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ta6vo"]
+atlas = ExtResource("2_k376k")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v21dx"]
+atlas = ExtResource("2_k376k")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wj5vl"]
+atlas = ExtResource("2_k376k")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1cxcm"]
+atlas = ExtResource("2_k376k")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1i5l5"]
+atlas = ExtResource("2_k376k")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6mgj"]
+atlas = ExtResource("2_k376k")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a4iua"]
+atlas = ExtResource("2_k376k")
+region = Rect2(160, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kn3w5"]
+atlas = ExtResource("2_k376k")
+region = Rect2(192, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bl1ff"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_awfkk")
+}],
+"loop": true,
+"name": &"activated",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p7d3g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6pnxl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5gx58")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8fp0k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x464g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4fvgi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ta6vo")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v21dx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wj5vl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1cxcm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1i5l5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h6mgj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a4iua")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kn3w5")
+}],
+"loop": true,
+"name": &"is_activing",
+"speed": 5.0
+}]
 
 [node name="SpeedDasher" type="Node2D"]
 script = ExtResource("1_kyq8y")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_4ntb6")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bl1ff")
+animation = &"idle"
+autoplay = "idle"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0

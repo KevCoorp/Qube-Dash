@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://nf78dqab3iqa" path="res://scene/misc/fallzone/fallzone.tscn" id="11_jh3dn"]
 [ext_resource type="PackedScene" uid="uid://c4hnyiosujgf1" path="res://scene/game/switch/switch_to_end.tscn" id="13_3bihf"]
 [ext_resource type="AudioStream" uid="uid://cqbcjpotkw6d3" path="res://asset/bgm/level1.ogg" id="13_7cthq"]
-[ext_resource type="PackedScene" uid="uid://c8effmc0uyufe" path="res://scene/powerup/speed_dashers/speed_dasher.tscn" id="14_axwo7"]
+[ext_resource type="PackedScene" uid="uid://c8effmc0uyufe" path="res://scene/powerup/speed_dashers/speed_dasher.tscn" id="14_6pmg1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e3ra1"]
 size = Vector2(74, 68)
@@ -260,7 +260,7 @@ position = Vector2(2285, -131)
 position = Vector2(2846, -200)
 
 [node name="Flying_Bird6" parent="Bird" instance=ExtResource("8_7kubn")]
-position = Vector2(3735, -102)
+position = Vector2(2942, -102)
 
 [node name="DeathTimer" parent="." instance=ExtResource("9_yfxjw")]
 
@@ -318,4 +318,5 @@ position = Vector2(5131, 19)
 stream = ExtResource("13_7cthq")
 autoplay = true
 
-[node name="SpeedDasher" parent="." instance=ExtResource("14_axwo7")]
+[node name="SpeedDasher" parent="." instance=ExtResource("14_6pmg1")]
+position = Vector2(175, 21)
