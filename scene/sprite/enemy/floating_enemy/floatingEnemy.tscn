@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b5ekbwv7xamgy"]
+[gd_scene load_steps=12 format=3 uid="uid://b5ekbwv7xamgy"]
 
 [ext_resource type="Texture2D" uid="uid://hs6kl211qvdc" path="res://asset/texture/sprite/enemy/floating_enemy/floating_enemy.png" id="1_e1jjr"]
 [ext_resource type="Script" path="res://scripts/sprite/enemy/floating_enemy/floatingEnemy.gd" id="1_i6uys"]
@@ -45,17 +45,41 @@ size = Vector2(15.5, 13)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ykddo"]
 size = Vector2(24, 21)
 
+[sub_resource type="Animation" id="Animation_ufqlj"]
+resource_name = "movement"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.4, 3),
+"transitions": PackedFloat32Array(2, 1, 0.5),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -5), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6tbwr"]
+_data = {
+"movement": SubResource("Animation_ufqlj")
+}
+
 [node name="FloatingEnemy" type="CharacterBody2D"]
 script = ExtResource("1_i6uys")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -2.7751)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_b4cs2")
 animation = &"floating"
 autoplay = "floating"
-frame_progress = 0.235869
+frame_progress = 0.710636
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-0.25, 3.5)
 shape = SubResource("RectangleShape2D_ibykc")
 
@@ -63,10 +87,17 @@ shape = SubResource("RectangleShape2D_ibykc")
 autostart = true
 
 [node name="Area2D" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_ykddo")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6tbwr")
+}
+autoplay = "movement"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
