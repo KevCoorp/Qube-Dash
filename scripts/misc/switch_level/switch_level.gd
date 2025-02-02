@@ -9,5 +9,3 @@ func _physics_process(delta):
 		$Area2D/AnimatedSprite2D.play("capture")
 		await get_tree().create_timer(2).timeout
 		get_tree().change_scene_to_file("res://scene/game/world/level_overworld/level_1.tscn")
-
-

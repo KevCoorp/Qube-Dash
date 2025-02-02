@@ -59,6 +59,3 @@ func set_coin(new_coin_count: int) -> void:
 	
 	
 	
-
-
-
